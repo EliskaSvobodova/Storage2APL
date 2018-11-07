@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>nl.uu.cs.is.apapl</groupId>
+    <artifactId>apapl</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>apapl-dependencies</id>
+            <url>file://${project.basedir}/src/main/resources</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>jipconsole</groupId>
+            <artifactId>jipconsole</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>http</groupId>
+            <artifactId>http</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>iiop</groupId>
+            <artifactId>iiop</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>jade</groupId>
+            <artifactId>jade</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>jadeTools</groupId>
+            <artifactId>jadeTools</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+
+    <packaging>jar</packaging>
+    <name>2APL: A Practical Agent Programming Language</name>
+    <description>2APL (pronounced as double-a-p-l) is an agent-oriented programming language that facilitates the
+        implementation of multi-agent systems. At the multi-agent level, it provides programming constructs to
+        specify a multi-agent system in terms of a set of individual agents and a set of environments in which
+        they can perform actions. At the individual agent level, it provides programming constructs to implement
+        cognitive agents based on the BDI architecture. In particular, it provides programming constructs to
+        implement an agent’s beliefs, goals, plans, actions (such as belief updates, external actions, or
+        communication actions), events, and a set of rules through which the agent can decide which actions to
+        perform. 2APL is a modular programming language allowing the encapsulation of cognitive components in
+        modules. 2APL supports the implementation of both reactive and pro-active agents.</description>
+
+    <contributors>
+        <contributor>
+            <name>Mehdi Dastani</name>
+            <email>M.M.Dastani@uu.nl</email>
+            <url>https://www.uu.nl/staff/MMDastani</url>
+        </contributor>
+        <contributor>
+            <name>Bas Testerink</name>
+            <email> B.J.G.Testerink@uu.nl</email>
+            <url>https://www.uu.nl/staff/BJGTesterink</url>
+        </contributor>
+        <contributor>
+            <name>Michal Cap</name>
+        </contributor>
+        <contributor>
+            <name>Tristan Behrans</name>
+        </contributor>
+    </contributors>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifestFile>src/main/resources/META-INF/Manifest.txt</manifestFile>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+
+    
+</project>
