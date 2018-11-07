@@ -68,7 +68,7 @@ pcrules:
 		-connecting;
 		dropgoal(connect);
 		B(channel(Chan));
-		say(Chan, ['hello everybody! I am an IRC bot programmed using the agent programming language 2APL, developed at the Utrecht University (www.apapl.sourceforge.net)']);
+		say(Chan, ['hello everybody! I am an IRC bot programmed using the agent programming language 2APL, developed at the Utrecht University (www.main.java.nl.uu.cs.is.apapl.apapl.sourceforge.net)']);
 	}
 
 	event(message(User,Src,Msg), env) <- connected and authUsers(Auths) and owners(Owners) | {

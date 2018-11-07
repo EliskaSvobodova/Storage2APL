@@ -1,9 +1,9 @@
-import apapl.Environment;
-import apapl.ExternalActionFailedException;
-import apapl.data.APLFunction;
-import apapl.data.APLIdent;
-import apapl.data.APLNum;
-import apapl.data.Term;
+import main.java.nl.uu.cs.is.apapl.apapl.Environment;
+import main.java.nl.uu.cs.is.apapl.apapl.ExternalActionFailedException;
+import main.java.nl.uu.cs.is.apapl.apapl.data.APLFunction;
+import main.java.nl.uu.cs.is.apapl.apapl.data.APLIdent;
+import main.java.nl.uu.cs.is.apapl.apapl.data.APLNum;
+import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
 
 /**
  * === About this file
@@ -33,7 +33,7 @@ import apapl.data.Term;
  *    In our example we have one agent that is built from agent.2apl.
  * 5. Put all the files (the JAR, config.mas and agent.2apl) in one directory and run 2APL. You can
  *    run 2APL simply by running 2apl.jar. If you want debug information as well, you need to run
- *    this jar from Eclipse using APAPL as its main class.
+ *    this jar from Eclipse using main.java.nl.uu.cs.is.apapl.APAPL as its main class.
  * 6. Open the .mas file, press 'play' and the example should be working.
  * 
  * @author Marc van Zee (marcvanzee@gmail.com), Utrecht University
