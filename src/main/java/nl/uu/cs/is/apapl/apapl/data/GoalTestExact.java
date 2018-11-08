@@ -1,14 +1,14 @@
-package main.java.nl.uu.cs.is.apapl.apapl.data;
+package nl.uu.cs.is.apapl.apapl.data;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
-import main.java.nl.uu.cs.is.apapl.apapl.ModuleAccessException;
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.Unifier;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Goalbase;
+import nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.ModuleAccessException;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.Unifier;
+import nl.uu.cs.is.apapl.apapl.program.Goalbase;
 
 /**
  * An exact goal test. Corresponds to a test on the goal base. A goal test is part of a 
- * {@link main.java.nl.uu.cs.is.apapl.apapl.data.Test} consisting of a composed sequence of goal and
+ * {@link nl.uu.cs.is.apapl.apapl.data.Test} consisting of a composed sequence of goal and
  * belief tests. An exact goal test succeeds if some substitution can be found s.t. the
  * test is exactly equal to some goal in the goal base.
  */

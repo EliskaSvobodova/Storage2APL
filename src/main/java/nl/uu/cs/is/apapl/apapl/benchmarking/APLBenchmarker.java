@@ -1,10 +1,10 @@
-package main.java.nl.uu.cs.is.apapl.apapl.benchmarking;
+package nl.uu.cs.is.apapl.apapl.benchmarking;
 
 import java.util.HashMap;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLMAS;
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
-import main.java.nl.uu.cs.is.apapl.apapl.beliefinertia.BeliefInertiaParam;
+import nl.uu.cs.is.apapl.apapl.APLMAS;
+import nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.beliefinertia.BeliefInertiaParam;
 
 /**
  *     
@@ -12,7 +12,7 @@ import main.java.nl.uu.cs.is.apapl.apapl.beliefinertia.BeliefInertiaParam;
  * -------------------------------------------------------------------------
  * 
  * It comes with six operations that are being benchmarked, but this can be extended very easily by
- * adding them to the file main.java.nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarkParam. See that file for more information.
+ * adding them to the file nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarkParam. See that file for more information.
  * 
  * The benchmarker will count the number of times that this operation has been performed, the total 
  * execution time of this operation and the average execution time for one execution, and print the
@@ -41,7 +41,7 @@ public class APLBenchmarker
 	 * Start the benchmark and stop the execution of all modules after 
 	 * APLBenchmarkParam.BENCHMARK_TIME_SEC seconds and print the information of each APLModule
 	 * 
-	 * @param m The executor that contains all APLModule (see main.java.nl.uu.cs.is.apapl.apapl.MultiThreadedExecutor)
+	 * @param m The executor that contains all APLModule (see nl.uu.cs.is.apapl.apapl.MultiThreadedExecutor)
 	 */
 	public void start(APLMAS mas) 
 	{

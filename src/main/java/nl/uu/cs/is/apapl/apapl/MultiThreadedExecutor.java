@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.apapl;
+package nl.uu.cs.is.apapl.apapl;
 
 import java.util.ArrayList;
 import java.util.HashMap;

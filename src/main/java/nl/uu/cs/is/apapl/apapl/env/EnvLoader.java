@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.apapl.env;
+package nl.uu.cs.is.apapl.apapl.env;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import java.net.URLClassLoader;
 import java.util.jar.JarFile;
 import java.util.jar.Manifest;
 
-import main.java.nl.uu.cs.is.apapl.apapl.Environment;
+import nl.uu.cs.is.apapl.apapl.Environment;
 
 /**
  * This is third-party code from Environment Interface Standard (EIS)

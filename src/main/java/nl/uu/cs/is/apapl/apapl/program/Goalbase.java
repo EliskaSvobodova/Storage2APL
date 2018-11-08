@@ -1,18 +1,18 @@
-package main.java.nl.uu.cs.is.apapl.apapl.program;
+package nl.uu.cs.is.apapl.apapl.program;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 
-import main.java.nl.uu.cs.is.apapl.apapl.Logger;
-import main.java.nl.uu.cs.is.apapl.apapl.SolutionIterator;
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Goal;
-import main.java.nl.uu.cs.is.apapl.apapl.data.GoalCompare;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Literal;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Query;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
-import main.java.nl.uu.cs.is.apapl.apapl.data.True;
+import nl.uu.cs.is.apapl.apapl.Logger;
+import nl.uu.cs.is.apapl.apapl.SolutionIterator;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.data.Goal;
+import nl.uu.cs.is.apapl.apapl.data.GoalCompare;
+import nl.uu.cs.is.apapl.apapl.data.Literal;
+import nl.uu.cs.is.apapl.apapl.data.Query;
+import nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.data.True;
 
 /**
  * The base in which the goals of the module are stored. The goal base can be iterated

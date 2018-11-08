@@ -1,17 +1,17 @@
-package main.java.nl.uu.cs.is.apapl.apapl.deliberation;
+package nl.uu.cs.is.apapl.apapl.deliberation;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Test;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.PlanResult;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.data.Test;
+import nl.uu.cs.is.apapl.apapl.plans.PlanResult;
 
 /**
  * The result of {@link TestStoppingCond} deliberation step.
  * 
- * @see main.java.nl.uu.cs.is.apapl.apapl.deliberation.TestStoppingCond
+ * @see nl.uu.cs.is.apapl.apapl.deliberation.TestStoppingCond
  */
 public class TestStoppingCondResult extends DeliberationResult
 {

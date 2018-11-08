@@ -1,8 +1,8 @@
-package main.java.nl.uu.cs.is.apapl.apapl.deliberation;
+package nl.uu.cs.is.apapl.apapl.deliberation;
 
 
 /**
- * The result of the deliberation step {@link main.java.nl.uu.cs.is.apapl.apapl.deliberation.ExecuteAllPlans}. Contains
+ * The result of the deliberation step {@link nl.uu.cs.is.apapl.apapl.deliberation.ExecuteAllPlans}. Contains
  * information about which plans have been executed and which plans failed in their execution.
  */
 public class ExecuteAllPlansResult extends ExecutePlansResult

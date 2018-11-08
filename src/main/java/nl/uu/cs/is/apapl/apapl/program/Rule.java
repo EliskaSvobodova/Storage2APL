@@ -1,12 +1,12 @@
-package main.java.nl.uu.cs.is.apapl.apapl.program;
+package nl.uu.cs.is.apapl.apapl.program;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Query;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.data.Query;
+import nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
 
 /**
  * The root class of all rules.
@@ -14,7 +14,7 @@ import main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
 public abstract class Rule
 {
 	/**
-	 * Variables for belief caching - see main.java.nl.uu.cs.is.apapl.apapl.beliefcaching
+	 * Variables for belief caching - see nl.uu.cs.is.apapl.apapl.beliefcaching
 	 */
 	public boolean connected;
 	public boolean inertia = false;

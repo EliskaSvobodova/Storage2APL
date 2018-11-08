@@ -1,6 +1,6 @@
-package main.java.nl.uu.cs.is.apapl.apapl.deliberation;
+package nl.uu.cs.is.apapl.apapl.deliberation;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.APLModule;
 
 /**
  * Defines an object that implements a deliberation step. Each deliberation step

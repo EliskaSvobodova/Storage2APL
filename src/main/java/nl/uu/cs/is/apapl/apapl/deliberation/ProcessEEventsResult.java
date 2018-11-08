@@ -1,13 +1,13 @@
-package main.java.nl.uu.cs.is.apapl.apapl.deliberation;
+package nl.uu.cs.is.apapl.apapl.deliberation;
 
 import java.util.LinkedList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLFunction;
-import main.java.nl.uu.cs.is.apapl.apapl.program.PCrule;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.data.APLFunction;
+import nl.uu.cs.is.apapl.apapl.program.PCrule;
 
 /**
- * The result of the deliberation step {@link main.java.nl.uu.cs.is.apapl.apapl.deliberation.ProcessEEvents}.
+ * The result of the deliberation step {@link nl.uu.cs.is.apapl.apapl.deliberation.ProcessEEvents}.
  * Contains information such as which events were processed and for which events 
  * PC-rules were applied.
  */

@@ -1,16 +1,16 @@
-package main.java.nl.uu.cs.is.apapl.apapl.data;
+package nl.uu.cs.is.apapl.apapl.data;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
-import main.java.nl.uu.cs.is.apapl.apapl.ModuleAccessException;
-import main.java.nl.uu.cs.is.apapl.apapl.SolutionIterator;
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarkParam;
-import main.java.nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarker;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Goalbase;
+import nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.ModuleAccessException;
+import nl.uu.cs.is.apapl.apapl.SolutionIterator;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarkParam;
+import nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarker;
+import nl.uu.cs.is.apapl.apapl.program.Goalbase;
 
 /**
  * Corresponds to a test on the goal base. A goal test is part of a 
- * {@link main.java.nl.uu.cs.is.apapl.apapl.data.Test} consisting of a composed sequence of goal and
+ * {@link nl.uu.cs.is.apapl.apapl.data.Test} consisting of a composed sequence of goal and
  * belief tests. A goal test succeeds if the query can be entailed by some goal
  * in the goal base.
  */

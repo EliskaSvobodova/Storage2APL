@@ -1,20 +1,20 @@
-package main.java.nl.uu.cs.is.apapl.apapl.beliefinertia.ruleselectors;
+package nl.uu.cs.is.apapl.apapl.beliefinertia.ruleselectors;
 
 import java.util.ArrayList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarkParam;
-import main.java.nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarker;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Goal;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Query;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
-import main.java.nl.uu.cs.is.apapl.apapl.data.True;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Beliefbase;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Goalbase;
-import main.java.nl.uu.cs.is.apapl.apapl.program.PGrule;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Planbase;
+import nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarkParam;
+import nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarker;
+import nl.uu.cs.is.apapl.apapl.data.Goal;
+import nl.uu.cs.is.apapl.apapl.data.Query;
+import nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.data.True;
+import nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
+import nl.uu.cs.is.apapl.apapl.program.Beliefbase;
+import nl.uu.cs.is.apapl.apapl.program.Goalbase;
+import nl.uu.cs.is.apapl.apapl.program.PGrule;
+import nl.uu.cs.is.apapl.apapl.program.Planbase;
 
 /**
  * The alternative PG rule selection class.
@@ -25,7 +25,7 @@ import main.java.nl.uu.cs.is.apapl.apapl.program.Planbase;
 public class PGruleSelector 
 {
 	/**
-	 * Replaces the original rule selection method for PG rules in main.java.nl.uu.cs.is.apapl.apapl.program.PGRulebase with
+	 * Replaces the original rule selection method for PG rules in nl.uu.cs.is.apapl.apapl.program.PGRulebase with
 	 * one that uses belief inertia
 	 * 
 	 * @param goalbase goalbase that is needed to select a rule

@@ -1,21 +1,21 @@
-package main.java.nl.uu.cs.is.apapl.apapl.plans;
+package nl.uu.cs.is.apapl.apapl.plans;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
-import main.java.nl.uu.cs.is.apapl.apapl.ActivationGoalAchievedException;
-import main.java.nl.uu.cs.is.apapl.apapl.ModuleDeactivatedException;
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLIdent;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
-import main.java.nl.uu.cs.is.apapl.apapl.deliberation.DeliberationResult;
-import main.java.nl.uu.cs.is.apapl.apapl.deliberation.DeliberationResult.InfoMessage;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Base;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Beliefbase;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Goalbase;
+import nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.ActivationGoalAchievedException;
+import nl.uu.cs.is.apapl.apapl.ModuleDeactivatedException;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.data.APLIdent;
+import nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.deliberation.DeliberationResult;
+import nl.uu.cs.is.apapl.apapl.deliberation.DeliberationResult.InfoMessage;
+import nl.uu.cs.is.apapl.apapl.program.Base;
+import nl.uu.cs.is.apapl.apapl.program.Beliefbase;
+import nl.uu.cs.is.apapl.apapl.program.Goalbase;
 
 /**
  * An atomic (chunk) plan.
@@ -270,7 +270,7 @@ public class ChunkPlan extends Plan implements ParentPlan
     /** 
      * Determines if any of the atomic plan actions is of a certain type. 
      * 
-     * Overrides generic behavior defined in @link main.java.nl.uu.cs.is.apapl.apapl.plans.Plan#isType(main.java.nl.uu.cs.is.apapl.apapl.data.APLIdent).
+     * Overrides generic behavior defined in @link nl.uu.cs.is.apapl.apapl.plans.Plan#isType(nl.uu.cs.is.apapl.apapl.data.APLIdent).
      * @param typeIdent the queried plan type.
      * @return true if there is an action of a queried type as a part of the atomic plan, false otherwise.
      */

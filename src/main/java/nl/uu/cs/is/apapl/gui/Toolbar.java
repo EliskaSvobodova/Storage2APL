@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.gui;
+package nl.uu.cs.is.apapl.gui;
 
 import java.awt.Dimension;
 import java.awt.Font;
@@ -30,9 +30,10 @@ import javax.swing.JToggleButton;
 import javax.swing.JToolBar;
 import javax.swing.KeyStroke;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLMAS;
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
-import main.java.nl.uu.cs.is.apapl.apapl.messaging.Messenger;
+import jdk.internal.jline.internal.Log;
+import nl.uu.cs.is.apapl.apapl.APLMAS;
+import nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.messaging.Messenger;
 
 public class Toolbar implements ActionListener, ItemListener
 {
@@ -420,7 +421,10 @@ public class Toolbar implements ActionListener, ItemListener
 		// When we using a jar file, the File.seperator strategy does not
 		// work, it returns a \ instead and cannot locate the image anymore.
 		String imagemap = "icons/";
+		System.out.println("Created imagemap in " + imagemap);
+		System.out.println("Trying to find URL location. GUI class is " + GUI.class);
 		URL loc = GUI.class.getResource(imagemap + icon);
+		System.out.println("Image location is " + loc);
 		return new ImageIcon(loc);
 	}
 

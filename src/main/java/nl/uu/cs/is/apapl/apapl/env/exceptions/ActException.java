@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.apapl.env.exceptions;
+package nl.uu.cs.is.apapl.apapl.env.exceptions;
 
 /**
  * This action is thrown if an attempt to perform an action

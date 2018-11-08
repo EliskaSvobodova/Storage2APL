@@ -1,6 +1,6 @@
-package main.java.nl.uu.cs.is.apapl.apapl;
+package nl.uu.cs.is.apapl.apapl;
 
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLIdent;
+import nl.uu.cs.is.apapl.apapl.data.APLIdent;
 
 /**
  * Signals that the access to the module was denied. A module can

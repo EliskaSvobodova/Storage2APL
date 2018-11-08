@@ -1,16 +1,16 @@
-package main.java.nl.uu.cs.is.apapl.apapl.program;
+package nl.uu.cs.is.apapl.apapl.program;
 
 import java.util.ArrayList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.beliefinertia.RuleOperations;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Query;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.Plan;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
+import nl.uu.cs.is.apapl.apapl.beliefinertia.RuleOperations;
+import nl.uu.cs.is.apapl.apapl.data.Query;
+import nl.uu.cs.is.apapl.apapl.plans.Plan;
+import nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
 
 /**
- * A plan repair rule. A plan repair rule consists of a head (a {@link main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq},
+ * A plan repair rule. A plan repair rule consists of a head (a {@link nl.uu.cs.is.apapl.apapl.plans.PlanSeq},
  * the plan pattern that corresponds to the plan that can be repaired by this rule),
- * guard (a {@link main.java.nl.uu.cs.is.apapl.apapl.data.Query}) and body (a {@link main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq}).
+ * guard (a {@link nl.uu.cs.is.apapl.apapl.data.Query}) and body (a {@link nl.uu.cs.is.apapl.apapl.plans.PlanSeq}).
  */
 public class PRrule extends Rule
 {

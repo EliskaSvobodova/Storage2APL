@@ -1,15 +1,15 @@
-package main.java.nl.uu.cs.is.apapl.apapl.deliberation;
+package nl.uu.cs.is.apapl.apapl.deliberation;
 
 import java.util.ArrayList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
-import main.java.nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarkParam;
-import main.java.nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarker;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Beliefbase;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Goalbase;
-import main.java.nl.uu.cs.is.apapl.apapl.program.PGrulebase;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Planbase;
+import nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarkParam;
+import nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarker;
+import nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
+import nl.uu.cs.is.apapl.apapl.program.Beliefbase;
+import nl.uu.cs.is.apapl.apapl.program.Goalbase;
+import nl.uu.cs.is.apapl.apapl.program.PGrulebase;
+import nl.uu.cs.is.apapl.apapl.program.Planbase;
 
 /**
  * The deliberation step in which PG-rules are selected and applied. The application of 

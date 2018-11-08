@@ -1,10 +1,10 @@
-package main.java.nl.uu.cs.is.apapl.apapl.plans;
+package nl.uu.cs.is.apapl.apapl.plans;
 
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLIdent;
+import nl.uu.cs.is.apapl.apapl.data.APLIdent;
 
 /**
  * The superclass of all plans that can occur inside a
- * {@link main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq} and can be executed on a specific module.
+ * {@link nl.uu.cs.is.apapl.apapl.plans.PlanSeq} and can be executed on a specific module.
  * That is plans that have following syntactical form:
  * <code>&lt;MODULEID&gt;"."&lt;PLAN&gt;</code> 
  */

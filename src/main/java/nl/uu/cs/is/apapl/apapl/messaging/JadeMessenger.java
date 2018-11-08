@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.apapl.messaging;
+package nl.uu.cs.is.apapl.apapl.messaging;
 
 import jade.core.AID;
 import jade.core.Profile;
@@ -47,7 +47,7 @@ public class JadeMessenger implements Messenger
 		args[0] = this;
 		args[1] = modulename;
 		try {
-			agentController = agentContainer.createNewAgent(modulename,"main.java.nl.uu.cs.is.apapl.apapl.messaging.MessageAgent",args);
+			agentController = agentContainer.createNewAgent(modulename,"nl.uu.cs.is.apapl.apapl.messaging.MessageAgent",args);
 			agentController.start();
 		}
 		catch (StaleProxyException e) {

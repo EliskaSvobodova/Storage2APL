@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.gui;
+package nl.uu.cs.is.apapl.gui;
 
 import java.util.Enumeration;
 import java.util.HashMap;
@@ -12,7 +12,7 @@ import javax.swing.event.TreeModelListener;
 import javax.swing.tree.TreeModel;
 import javax.swing.tree.TreePath;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.APLModule;
 
 /**
  * This class implements the tree structure representing the hierarchy of

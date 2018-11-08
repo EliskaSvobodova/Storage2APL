@@ -1,19 +1,19 @@
-package main.java.nl.uu.cs.is.apapl.apapl.beliefinertia.ruleselectors;
+package nl.uu.cs.is.apapl.apapl.beliefinertia.ruleselectors;
 
 import java.util.ArrayList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
-import main.java.nl.uu.cs.is.apapl.apapl.NoRuleException;
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.Unifier;
-import main.java.nl.uu.cs.is.apapl.apapl.beliefinertia.RuleOperations;
-import main.java.nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarkParam;
-import main.java.nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarker;
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLFunction;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Query;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Beliefbase;
-import main.java.nl.uu.cs.is.apapl.apapl.program.PCrule;
+import nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.NoRuleException;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.Unifier;
+import nl.uu.cs.is.apapl.apapl.beliefinertia.RuleOperations;
+import nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarkParam;
+import nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarker;
+import nl.uu.cs.is.apapl.apapl.data.APLFunction;
+import nl.uu.cs.is.apapl.apapl.data.Query;
+import nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.program.Beliefbase;
+import nl.uu.cs.is.apapl.apapl.program.PCrule;
 
 /**
  * The alternative PC rule selection class.
@@ -24,7 +24,7 @@ import main.java.nl.uu.cs.is.apapl.apapl.program.PCrule;
 public class PCruleSelector {
 
 	/**
-	 * Replaces the original rule selection method for PC rules in main.java.nl.uu.cs.is.apapl.apapl.program.PCRulebase with
+	 * Replaces the original rule selection method for PC rules in nl.uu.cs.is.apapl.apapl.program.PCRulebase with
 	 * one that uses belief inertia
 	 * 
 	 * @param beliefbase the beliefs

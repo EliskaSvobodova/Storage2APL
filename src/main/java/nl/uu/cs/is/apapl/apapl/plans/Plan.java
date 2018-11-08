@@ -1,17 +1,17 @@
-package main.java.nl.uu.cs.is.apapl.apapl.plans;
+package nl.uu.cs.is.apapl.apapl.plans;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
-import main.java.nl.uu.cs.is.apapl.apapl.ActivationGoalAchievedException;
-import main.java.nl.uu.cs.is.apapl.apapl.ModuleDeactivatedException;
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLIdent;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.ActivationGoalAchievedException;
+import nl.uu.cs.is.apapl.apapl.ModuleDeactivatedException;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.data.APLIdent;
+import nl.uu.cs.is.apapl.apapl.data.Term;
 
 /**
- * The superclass of all plans that can occur inside a {@link main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq} and can
+ * The superclass of all plans that can occur inside a {@link nl.uu.cs.is.apapl.apapl.plans.PlanSeq} and can
  * be executed.
  */
 public abstract class Plan 
@@ -148,8 +148,8 @@ public abstract class Plan
      * allow for easy plan base querying using a plan test action.
      * 
      * This method is supposed to be implemented by all subclasses.
-     * @see {@link main.java.nl.uu.cs.is.apapl.apapl.data.PlanTest}
-     * @see {@link main.java.nl.uu.cs.is.apapl.apapl.data.PlanQuery}
+     * @see {@link nl.uu.cs.is.apapl.apapl.data.PlanTest}
+     * @see {@link nl.uu.cs.is.apapl.apapl.data.PlanQuery}
      * 
      * @return the descriptor of the plan
      */

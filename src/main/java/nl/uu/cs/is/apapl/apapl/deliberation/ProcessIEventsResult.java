@@ -1,17 +1,17 @@
-package main.java.nl.uu.cs.is.apapl.apapl.deliberation;
+package nl.uu.cs.is.apapl.apapl.deliberation;
 
 import java.util.LinkedList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
-import main.java.nl.uu.cs.is.apapl.apapl.program.PRrule;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
+import nl.uu.cs.is.apapl.apapl.program.PRrule;
 
 /**
- * The result of the deliberation step {@link main.java.nl.uu.cs.is.apapl.apapl.deliberation.ProcessIEvents}.
+ * The result of the deliberation step {@link nl.uu.cs.is.apapl.apapl.deliberation.ProcessIEvents}.
  * Contains information about for which events PR-rules were applied. Information
  * about unprocessed events is not stored, as this can be derived from the failure
- * of the execution of plans as listed in {@link main.java.nl.uu.cs.is.apapl.apapl.deliberation.ExecutePlansResult}.
+ * of the execution of plans as listed in {@link nl.uu.cs.is.apapl.apapl.deliberation.ExecutePlansResult}.
  */
 public class ProcessIEventsResult extends DeliberationResult
 {

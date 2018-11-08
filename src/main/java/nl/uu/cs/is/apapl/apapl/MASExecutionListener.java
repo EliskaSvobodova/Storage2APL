@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.apapl;
+package nl.uu.cs.is.apapl.apapl;
 
 /**
  * Defines an interface for an object which listens for changes of the

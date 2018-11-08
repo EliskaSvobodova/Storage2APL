@@ -1,6 +1,6 @@
-package main.java.nl.uu.cs.is.apapl.apapl;
+package nl.uu.cs.is.apapl.apapl;
 
-import main.java.nl.uu.cs.is.apapl.apapl.deliberation.DeliberationResult;
+import nl.uu.cs.is.apapl.apapl.deliberation.DeliberationResult;
 
 /**
  * Defines an interface for an object that listens for changes in the modules'

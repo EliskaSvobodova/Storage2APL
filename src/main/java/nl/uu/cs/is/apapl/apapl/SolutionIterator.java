@@ -1,9 +1,9 @@
-package main.java.nl.uu.cs.is.apapl.apapl;
+package nl.uu.cs.is.apapl.apapl;
 
 import java.util.Iterator;
 
-import main.java.nl.uu.cs.is.apapl.apapl.data.Query;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.data.Query;
+import nl.uu.cs.is.apapl.apapl.data.Term;
 
 import com.ugos.jiprolog.engine.JIPSyntaxErrorException;
 import com.ugos.jiprolog.engine.JIPQuery;
@@ -49,7 +49,7 @@ public class SolutionIterator implements Iterable<SubstList<Term>>, Iterator<Sub
 	
 	/**
 	 * Calculates and returns the next solution. Should only be called
-	 * if {@link main.java.nl.uu.cs.is.apapl.apapl.SolutionIterator#hasNext} returns true.
+	 * if {@link nl.uu.cs.is.apapl.apapl.SolutionIterator#hasNext} returns true.
 	 * 
 	 * @return the next solution,
 	 *         null if there is no next solution

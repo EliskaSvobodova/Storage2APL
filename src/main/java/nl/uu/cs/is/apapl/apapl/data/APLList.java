@@ -1,15 +1,15 @@
-package main.java.nl.uu.cs.is.apapl.apapl.data;
+package nl.uu.cs.is.apapl.apapl.data;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.UnboundedVarException;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.UnboundedVarException;
 
 /**
  * A list consisting of a head and a tail. The head is always a single term which
- * can also be a {@link main.java.nl.uu.cs.is.apapl.apapl.data.APLVar} or a {@link main.java.nl.uu.cs.is.apapl.apapl.data.APLListVar}, the tail can
- * be an {@link main.java.nl.uu.cs.is.apapl.apapl.data.APLListVar} or a list again.
+ * can also be a {@link nl.uu.cs.is.apapl.apapl.data.APLVar} or a {@link nl.uu.cs.is.apapl.apapl.data.APLListVar}, the tail can
+ * be an {@link nl.uu.cs.is.apapl.apapl.data.APLListVar} or a list again.
  */
 public class APLList extends APLListVar
 {

@@ -1,10 +1,10 @@
-package main.java.nl.uu.cs.is.apapl.apapl.data;
+package nl.uu.cs.is.apapl.apapl.data;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.UnboundedVarException;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.UnboundedVarException;
 
 /**
  * A literal is a signed atomic formula. In this case it is either a {@link APLFunction} 

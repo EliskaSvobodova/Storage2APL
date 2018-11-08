@@ -1,8 +1,8 @@
-package main.java.nl.uu.cs.is.apapl.apapl.program;
+package nl.uu.cs.is.apapl.apapl.program;
 
 
 /**
- * The base in which the {@link main.java.nl.uu.cs.is.apapl.apapl.program.PRrule}s are stored.
+ * The base in which the {@link nl.uu.cs.is.apapl.apapl.program.PRrule}s are stored.
  */
 public class PRrulebase extends Rulebase<PRrule> implements Cloneable
 {

@@ -1,20 +1,20 @@
-package main.java.nl.uu.cs.is.apapl.apapl.deliberation;
+package nl.uu.cs.is.apapl.apapl.deliberation;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
-import main.java.nl.uu.cs.is.apapl.apapl.ActivationGoalAchievedException;
-import main.java.nl.uu.cs.is.apapl.apapl.ModuleDeactivatedException;
-import main.java.nl.uu.cs.is.apapl.apapl.NoRuleException;
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLFunction;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Test;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.Plan;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.PlanResult;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
+import nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.ActivationGoalAchievedException;
+import nl.uu.cs.is.apapl.apapl.ModuleDeactivatedException;
+import nl.uu.cs.is.apapl.apapl.NoRuleException;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.data.APLFunction;
+import nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.data.Test;
+import nl.uu.cs.is.apapl.apapl.plans.Plan;
+import nl.uu.cs.is.apapl.apapl.plans.PlanResult;
+import nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
 
 /**
  * The deliberation step that checks module's stopping condition. If it is

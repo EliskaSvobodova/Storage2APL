@@ -1,10 +1,10 @@
-package main.java.nl.uu.cs.is.apapl.apapl.plans;
+package nl.uu.cs.is.apapl.apapl.plans;
 
 import java.util.ArrayList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
-import main.java.nl.uu.cs.is.apapl.apapl.ModuleAccessException;
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLIdent;
+import nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.ModuleAccessException;
+import nl.uu.cs.is.apapl.apapl.data.APLIdent;
 
 /**
  * Release module action will release the instance of the module specified by

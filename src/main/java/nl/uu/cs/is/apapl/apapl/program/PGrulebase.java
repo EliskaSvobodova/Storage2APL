@@ -1,25 +1,25 @@
-package main.java.nl.uu.cs.is.apapl.apapl.program;
+package nl.uu.cs.is.apapl.apapl.program;
 
 import java.util.ArrayList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.beliefinertia.BeliefInertiaParam;
-import main.java.nl.uu.cs.is.apapl.apapl.beliefinertia.ruleselectors.PGruleSelector;
-import main.java.nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarkParam;
-import main.java.nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarker;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Goal;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Query;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
-import main.java.nl.uu.cs.is.apapl.apapl.data.True;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
+import nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.beliefinertia.BeliefInertiaParam;
+import nl.uu.cs.is.apapl.apapl.beliefinertia.ruleselectors.PGruleSelector;
+import nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarkParam;
+import nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarker;
+import nl.uu.cs.is.apapl.apapl.data.Goal;
+import nl.uu.cs.is.apapl.apapl.data.Query;
+import nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.data.True;
+import nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
 
 public class PGrulebase extends Rulebase<PGrule>
 {
 	
 	/**
 	 * Equal to 
-	 * {@link main.java.nl.uu.cs.is.apapl.apapl.program.PGrulebase#generatePlans(goalbase,beliefbase,planbase,false)}
+	 * {@link nl.uu.cs.is.apapl.apapl.program.PGrulebase#generatePlans(goalbase,beliefbase,planbase,false)}
 	 */
 	public ArrayList<PlanSeq> generatePlans(Goalbase goalbase, Beliefbase beliefbase, Planbase planbase, APLModule m)
 	{
@@ -28,7 +28,7 @@ public class PGrulebase extends Rulebase<PGrule>
 	
 	/**
 	 * Equal to 
-	 * {@link main.java.nl.uu.cs.is.apapl.apapl.program.PGrulebase#generatePlans(goalbase,beliefbase,planbase,true)}
+	 * {@link nl.uu.cs.is.apapl.apapl.program.PGrulebase#generatePlans(goalbase,beliefbase,planbase,true)}
 	 */
 	public ArrayList<PlanSeq> generatePlan(Goalbase goalbase, Beliefbase beliefbase, Planbase planbase, APLModule m)
 	{

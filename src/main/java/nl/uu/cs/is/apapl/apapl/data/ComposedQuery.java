@@ -1,9 +1,9 @@
-package main.java.nl.uu.cs.is.apapl.apapl.data;
+package nl.uu.cs.is.apapl.apapl.data;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.SubstList;
 
 /**
  * A query that is composed by some binary operator. A composed query thus consists

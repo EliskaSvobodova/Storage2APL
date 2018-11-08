@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.apapl.messaging;
+package nl.uu.cs.is.apapl.apapl.messaging;
 
 /**
  * Defines interface of an object that is notified (when registered) when a

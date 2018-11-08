@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.apapl;
+package nl.uu.cs.is.apapl.apapl;
 
 import java.util.Set;
 
@@ -7,7 +7,7 @@ import java.util.Set;
  * multi-agent system. The executor takes set of modules and executes
  * deliberation cycle on each of them according to a specific execution strategy.
  * 
- * @see main.java.nl.uu.cs.is.apapl.apapl.MultiThreadedExecutor
+ * @see nl.uu.cs.is.apapl.apapl.MultiThreadedExecutor
  */
 public interface Executor
 {

@@ -1,15 +1,15 @@
-package main.java.nl.uu.cs.is.apapl.apapl.data;
+package nl.uu.cs.is.apapl.apapl.data;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.Prolog;
-import main.java.nl.uu.cs.is.apapl.apapl.SolutionIterator;
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.UnboundedVarException;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Base;
+import nl.uu.cs.is.apapl.apapl.Prolog;
+import nl.uu.cs.is.apapl.apapl.SolutionIterator;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.UnboundedVarException;
+import nl.uu.cs.is.apapl.apapl.program.Base;
 
 /**
  * A conjunction of literals corresponding to a single goal.

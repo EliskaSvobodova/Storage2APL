@@ -1,20 +1,20 @@
-package main.java.nl.uu.cs.is.apapl.apapl;
+package nl.uu.cs.is.apapl.apapl;
 
 import java.util.ArrayList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.ChunkPlan;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.ConditionalPlan;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.Plan;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.PlanVariable;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.WhilePlan;
+import nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.plans.ChunkPlan;
+import nl.uu.cs.is.apapl.apapl.plans.ConditionalPlan;
+import nl.uu.cs.is.apapl.apapl.plans.Plan;
+import nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
+import nl.uu.cs.is.apapl.apapl.plans.PlanVariable;
+import nl.uu.cs.is.apapl.apapl.plans.WhilePlan;
 
 /**
  * A unification between a plan and a plan query. A plan unifier consists of a 
- * {@link main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq} query containing {main.java.nl.uu.cs.is.apapl.apapl.plans.PlanVariable}s and a
- * {@link main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq} plan. Plan queries typically occur in the
- * head of a {@link main.java.nl.uu.cs.is.apapl.apapl.program.PRrule}.
+ * {@link nl.uu.cs.is.apapl.apapl.plans.PlanSeq} query containing {nl.uu.cs.is.apapl.apapl.plans.PlanVariable}s and a
+ * {@link nl.uu.cs.is.apapl.apapl.plans.PlanSeq} plan. Plan queries typically occur in the
+ * head of a {@link nl.uu.cs.is.apapl.apapl.program.PRrule}.
  */
 public class PlanUnifier
 {

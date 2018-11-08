@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.gui;
+package nl.uu.cs.is.apapl.gui;
 
 import java.util.Collections;
 import java.util.Enumeration;
@@ -7,7 +7,7 @@ import java.util.List;
 
 import javax.swing.tree.TreeNode;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.APLModule;
 
 /**
  * This class represents one node in the {@link ModuleTreeModel}. One node of

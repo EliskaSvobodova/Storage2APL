@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.apapl;
+package nl.uu.cs.is.apapl.apapl;
 
 /**
  * Signals that an error occurred during the instantiation of the module.

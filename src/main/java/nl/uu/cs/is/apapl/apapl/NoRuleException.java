@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.apapl;
+package nl.uu.cs.is.apapl.apapl;
 
 /**
  * Signals that there was no rule corresponding to an abstract action or belief update.

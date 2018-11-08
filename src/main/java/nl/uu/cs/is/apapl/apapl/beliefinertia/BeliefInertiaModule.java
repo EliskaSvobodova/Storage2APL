@@ -1,17 +1,17 @@
-package main.java.nl.uu.cs.is.apapl.apapl.beliefinertia;
+package nl.uu.cs.is.apapl.apapl.beliefinertia;
 
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
-import main.java.nl.uu.cs.is.apapl.apapl.beliefinertia.dependencyset.DependencySetBuilder;
-import main.java.nl.uu.cs.is.apapl.apapl.beliefinertia.dependencyset.InferenceRules;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Literal;
-import main.java.nl.uu.cs.is.apapl.apapl.parser.prolog.PrologParser;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.AssertBelief;
-import main.java.nl.uu.cs.is.apapl.apapl.program.BeliefUpdate;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Rule;
+import nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.beliefinertia.dependencyset.DependencySetBuilder;
+import nl.uu.cs.is.apapl.apapl.beliefinertia.dependencyset.InferenceRules;
+import nl.uu.cs.is.apapl.apapl.data.Literal;
+import nl.uu.cs.is.apapl.apapl.parser.prolog.PrologParser;
+import nl.uu.cs.is.apapl.apapl.plans.AssertBelief;
+import nl.uu.cs.is.apapl.apapl.program.BeliefUpdate;
+import nl.uu.cs.is.apapl.apapl.program.Rule;
 
 /**
  * The belief inertia module implements a theory to reduce the number of belief queries.
@@ -23,10 +23,10 @@ import main.java.nl.uu.cs.is.apapl.apapl.program.Rule;
  * When a rule is applied, only the guard which have no belief inertia will have to be
  * evaluated. For this, the selection mechanisms for all the rules had to be adjusted
  * accordingly. These updated rule selectors can be found in the package
- * main.java.nl.uu.cs.is.apapl.apapl.beliefinertia.dependencyset.
+ * nl.uu.cs.is.apapl.apapl.beliefinertia.dependencyset.
  * 
  * Belief inertia can be enabled and disabled, because it is still in testing mode. This
- * can be set in the class main.java.nl.uu.cs.is.apapl.apapl.beliefinertia.BeliefInertiaParam. When it has been
+ * can be set in the class nl.uu.cs.is.apapl.apapl.beliefinertia.BeliefInertiaParam. When it has been
  * tested enough we will integrate it into 2APL completely.
  * 
  * @author Marc van Zee (marcvanzee@gmail.com) - Utrecht University
@@ -43,7 +43,7 @@ public class BeliefInertiaModule
 	 *  
 	 * @param a the APLModule that needs to be initialized
 	 * @param beliefBase the belief base of this module as one string, this is required to generate the dependency sets
-	 * @param directBUs a linked listed of direct belief updates (see main.java.nl.uu.cs.is.apapl.apapl.plans.AssertBelief). they cannot be infered from
+	 * @param directBUs a linked listed of direct belief updates (see nl.uu.cs.is.apapl.apapl.plans.AssertBelief). they cannot be infered from
 	 * the APLModule easily because they are hidden inside the plans.
 	 */
 	public void initalize(APLModule a) 
@@ -78,7 +78,7 @@ public class BeliefInertiaModule
 		
 		try {
 			return parser.Prolog();
-		} catch (main.java.nl.uu.cs.is.apapl.apapl.parser.prolog.ParseException e) {
+		} catch (nl.uu.cs.is.apapl.apapl.parser.prolog.ParseException e) {
 			e.printStackTrace();
 		}
 		

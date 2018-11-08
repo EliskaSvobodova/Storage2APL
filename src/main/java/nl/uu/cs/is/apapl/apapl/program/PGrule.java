@@ -1,19 +1,19 @@
-package main.java.nl.uu.cs.is.apapl.apapl.program;
+package nl.uu.cs.is.apapl.apapl.program;
 
 import java.util.ArrayList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.beliefinertia.RuleOperations;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Query;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
-import main.java.nl.uu.cs.is.apapl.apapl.data.True;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.Plan;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.beliefinertia.RuleOperations;
+import nl.uu.cs.is.apapl.apapl.data.Query;
+import nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.data.True;
+import nl.uu.cs.is.apapl.apapl.plans.Plan;
+import nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
 
 /**
  * A planning goal rule for generating plans for goals. A PG-rule consists of a head
- * (a {@link main.java.nl.uu.cs.is.apapl.apapl.data.Query} corresponding to the goal for which the rule can be applied),
- * a guard ({@link main.java.nl.uu.cs.is.apapl.apapl.data.Query}) and body ({@link main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq}).
+ * (a {@link nl.uu.cs.is.apapl.apapl.data.Query} corresponding to the goal for which the rule can be applied),
+ * a guard ({@link nl.uu.cs.is.apapl.apapl.data.Query}) and body ({@link nl.uu.cs.is.apapl.apapl.plans.PlanSeq}).
  */
 public class PGrule extends Rule
 {

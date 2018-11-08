@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.apapl;
+package nl.uu.cs.is.apapl.apapl;
 
 import java.io.File;
 import java.io.IOException;
@@ -7,38 +7,38 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.beliefinertia.BeliefInertiaModule;
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLFunction;
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLIdent;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Test;
-import main.java.nl.uu.cs.is.apapl.apapl.deliberation.ApplyPGrules;
-import main.java.nl.uu.cs.is.apapl.apapl.deliberation.Deliberation;
-import main.java.nl.uu.cs.is.apapl.apapl.deliberation.ExecuteAllPlans;
-import main.java.nl.uu.cs.is.apapl.apapl.deliberation.ProcessEEvents;
-import main.java.nl.uu.cs.is.apapl.apapl.deliberation.ProcessIEvents;
-import main.java.nl.uu.cs.is.apapl.apapl.deliberation.ProcessMessages;
-import main.java.nl.uu.cs.is.apapl.apapl.deliberation.TestStoppingCond;
-import main.java.nl.uu.cs.is.apapl.apapl.messaging.Messenger;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.AssertBelief;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.ChunkPlan;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.ExecuteModuleAction;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.ParentPlan;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.Plan;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
-import main.java.nl.uu.cs.is.apapl.apapl.program.BeliefUpdate;
-import main.java.nl.uu.cs.is.apapl.apapl.program.BeliefUpdates;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Beliefbase;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Goalbase;
-import main.java.nl.uu.cs.is.apapl.apapl.program.PCrule;
-import main.java.nl.uu.cs.is.apapl.apapl.program.PCrulebase;
-import main.java.nl.uu.cs.is.apapl.apapl.program.PGrule;
-import main.java.nl.uu.cs.is.apapl.apapl.program.PGrulebase;
-import main.java.nl.uu.cs.is.apapl.apapl.program.PRrule;
-import main.java.nl.uu.cs.is.apapl.apapl.program.PRrulebase;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Planbase;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Rule;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Rulebase;
+import nl.uu.cs.is.apapl.apapl.beliefinertia.BeliefInertiaModule;
+import nl.uu.cs.is.apapl.apapl.data.APLFunction;
+import nl.uu.cs.is.apapl.apapl.data.APLIdent;
+import nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.data.Test;
+import nl.uu.cs.is.apapl.apapl.deliberation.ApplyPGrules;
+import nl.uu.cs.is.apapl.apapl.deliberation.Deliberation;
+import nl.uu.cs.is.apapl.apapl.deliberation.ExecuteAllPlans;
+import nl.uu.cs.is.apapl.apapl.deliberation.ProcessEEvents;
+import nl.uu.cs.is.apapl.apapl.deliberation.ProcessIEvents;
+import nl.uu.cs.is.apapl.apapl.deliberation.ProcessMessages;
+import nl.uu.cs.is.apapl.apapl.deliberation.TestStoppingCond;
+import nl.uu.cs.is.apapl.apapl.messaging.Messenger;
+import nl.uu.cs.is.apapl.apapl.plans.AssertBelief;
+import nl.uu.cs.is.apapl.apapl.plans.ChunkPlan;
+import nl.uu.cs.is.apapl.apapl.plans.ExecuteModuleAction;
+import nl.uu.cs.is.apapl.apapl.plans.ParentPlan;
+import nl.uu.cs.is.apapl.apapl.plans.Plan;
+import nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
+import nl.uu.cs.is.apapl.apapl.program.BeliefUpdate;
+import nl.uu.cs.is.apapl.apapl.program.BeliefUpdates;
+import nl.uu.cs.is.apapl.apapl.program.Beliefbase;
+import nl.uu.cs.is.apapl.apapl.program.Goalbase;
+import nl.uu.cs.is.apapl.apapl.program.PCrule;
+import nl.uu.cs.is.apapl.apapl.program.PCrulebase;
+import nl.uu.cs.is.apapl.apapl.program.PGrule;
+import nl.uu.cs.is.apapl.apapl.program.PGrulebase;
+import nl.uu.cs.is.apapl.apapl.program.PRrule;
+import nl.uu.cs.is.apapl.apapl.program.PRrulebase;
+import nl.uu.cs.is.apapl.apapl.program.Planbase;
+import nl.uu.cs.is.apapl.apapl.program.Rule;
+import nl.uu.cs.is.apapl.apapl.program.Rulebase;
 
 /**
  * The implementation of a 2APL module. A 2APL module has a mental state
@@ -48,10 +48,10 @@ import main.java.nl.uu.cs.is.apapl.apapl.program.Rulebase;
  * interact with.
  * <p>
  * A module does not implement a strategy for executing itself. The
- * {@link main.java.nl.uu.cs.is.apapl.apapl.deliberation.Deliberation} class is responsible for performing
+ * {@link nl.uu.cs.is.apapl.apapl.deliberation.Deliberation} class is responsible for performing
  * the deliberation steps pertaining to the execution strategy of the module.
  * <p>
- * Typically, a module is created by a {@link main.java.nl.uu.cs.is.apapl.apapl.APAPLBuilder}.
+ * Typically, a module is created by a {@link nl.uu.cs.is.apapl.apapl.APAPLBuilder}.
  * <p>
  * When the internals of this module need be accessed outside the module
  * execution thread, it is necessary to first acquire the monitor on the module
@@ -222,7 +222,7 @@ public class APLModule {
     /**
      * Sets whether the module is performing an action in an external
      * environment. This method should only be used by the class responsible for
-     * executing external actions (e.g. {@link main.java.nl.uu.cs.is.apapl.apapl.plans.ExternalAction}).
+     * executing external actions (e.g. {@link nl.uu.cs.is.apapl.apapl.plans.ExternalAction}).
      * 
      * @param inEnvironment <code>true</code> if the module is performing an
      *        action in the environment, <code>false</code> otherwise.
@@ -246,8 +246,8 @@ public class APLModule {
 
     /**
      * Performs one deliberation step. The execution of this step is implemented
-     * by the {@link main.java.nl.uu.cs.is.apapl.apapl.deliberation.Deliberation} cycle of the module. This
-     * method should only be called by an {@link main.java.nl.uu.cs.is.apapl.apapl.Executor} implementing a
+     * by the {@link nl.uu.cs.is.apapl.apapl.deliberation.Deliberation} cycle of the module. This
+     * method should only be called by an {@link nl.uu.cs.is.apapl.apapl.Executor} implementing a
      * specific execution strategy for a multi-agent system.
      */
     public void step() {

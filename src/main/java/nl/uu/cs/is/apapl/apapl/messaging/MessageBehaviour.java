@@ -1,11 +1,11 @@
-package main.java.nl.uu.cs.is.apapl.apapl.messaging;
+package nl.uu.cs.is.apapl.apapl.messaging;
 
 import jade.core.AID;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.lang.acl.ACLMessage;
-import main.java.nl.uu.cs.is.apapl.apapl.Parser;
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLFunction;
-import main.java.nl.uu.cs.is.apapl.apapl.parser.ParseException;
+import nl.uu.cs.is.apapl.apapl.Parser;
+import nl.uu.cs.is.apapl.apapl.data.APLFunction;
+import nl.uu.cs.is.apapl.apapl.parser.ParseException;
 
 public class MessageBehaviour extends CyclicBehaviour
 {

@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.apapl.plans;
+package nl.uu.cs.is.apapl.apapl.plans;
 
 
 import java.util.ArrayList;
@@ -6,22 +6,22 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
-import main.java.nl.uu.cs.is.apapl.apapl.ActivationGoalAchievedException;
-import main.java.nl.uu.cs.is.apapl.apapl.ModuleDeactivatedException;
-import main.java.nl.uu.cs.is.apapl.apapl.SolutionIterator;
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.Substitutable;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Query;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
-import main.java.nl.uu.cs.is.apapl.apapl.data.True;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Base;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Beliefbase;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Goalbase;
-import main.java.nl.uu.cs.is.apapl.apapl.program.PGrule;
+import nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.ActivationGoalAchievedException;
+import nl.uu.cs.is.apapl.apapl.ModuleDeactivatedException;
+import nl.uu.cs.is.apapl.apapl.SolutionIterator;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.Substitutable;
+import nl.uu.cs.is.apapl.apapl.data.Query;
+import nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.data.True;
+import nl.uu.cs.is.apapl.apapl.program.Base;
+import nl.uu.cs.is.apapl.apapl.program.Beliefbase;
+import nl.uu.cs.is.apapl.apapl.program.Goalbase;
+import nl.uu.cs.is.apapl.apapl.program.PGrule;
 
 /**
- * A sequence of plans. A PlanSeq has a {@link main.java.nl.uu.cs.is.apapl.apapl.program.PGrule}, the
+ * A sequence of plans. A PlanSeq has a {@link nl.uu.cs.is.apapl.apapl.program.PGrule}, the
  * activation rule that generated this plan sequence together with the substitutions 
  * that were applied on the head and guard in generating this PlanSeq. If this rule 
  * is null, it has been initially adopted by the module. The plans that occur inside 
@@ -421,7 +421,7 @@ public class PlanSeq implements ParentPlan, Iterable<Plan>, Substitutable
 	/**
 	 * Returns all plan variables that occur in this plan sequence. A plan sequence
 	 * might contain plan variables if it is used as pattern of the head a 
-	 * {@link main.java.nl.uu.cs.is.apapl.apapl.program.PRrule}.
+	 * {@link nl.uu.cs.is.apapl.apapl.program.PRrule}.
 	 *  
 	 * @return list of plan variables
 	 */

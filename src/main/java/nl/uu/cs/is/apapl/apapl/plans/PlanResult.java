@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.apapl.plans;
+package nl.uu.cs.is.apapl.apapl.plans;
 
 /**
  * The result of a plan execution. This object stores information about the

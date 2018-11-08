@@ -1,10 +1,10 @@
-package main.java.nl.uu.cs.is.apapl.apapl.plans;
+package nl.uu.cs.is.apapl.apapl.plans;
 
 import java.util.ArrayList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
-import main.java.nl.uu.cs.is.apapl.apapl.CreateModuleException;
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLIdent;
+import nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.CreateModuleException;
+import nl.uu.cs.is.apapl.apapl.data.APLIdent;
 
 /**
  * Create module action will create an instance of module from the module

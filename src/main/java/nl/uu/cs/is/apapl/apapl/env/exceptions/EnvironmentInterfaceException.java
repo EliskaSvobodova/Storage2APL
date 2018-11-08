@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.apapl.env.exceptions;
+package nl.uu.cs.is.apapl.apapl.env.exceptions;
 
 /**
  * This exception is thrown if something unexpected happens when accessing 

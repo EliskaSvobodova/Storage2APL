@@ -1,16 +1,16 @@
-package main.java.nl.uu.cs.is.apapl.apapl.plans;
+package nl.uu.cs.is.apapl.apapl.plans;
 
 import java.util.ArrayList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Beliefbase;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Goalbase;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.program.Beliefbase;
+import nl.uu.cs.is.apapl.apapl.program.Goalbase;
 
 /**
  * Each plan that contains other plans (its childern) is called a parent plan.
  * The concept of parent plan is used for executing actions. When executing a
- * plan ({@link main.java.nl.uu.cs.is.apapl.apapl.plans.Plan}, the first child plan of the parent), this
+ * plan ({@link nl.uu.cs.is.apapl.apapl.plans.Plan}, the first child plan of the parent), this
  * plan needs to replace itself with the result of executing the plan.
  */
 public interface ParentPlan

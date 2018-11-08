@@ -1,8 +1,8 @@
-package main.java.nl.uu.cs.is.apapl.apapl.data;
+package nl.uu.cs.is.apapl.apapl.data;
 
 import java.util.ArrayList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.SubstList;
 
 /**
  * A constant symbol or a predicate of arity 0. Although a logical fact is not a term, 

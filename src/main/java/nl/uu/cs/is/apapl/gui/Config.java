@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.gui;
+package nl.uu.cs.is.apapl.gui;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -19,8 +19,8 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
-import main.java.nl.uu.cs.is.apapl.apapl.messaging.JadeMessenger;
-import main.java.nl.uu.cs.is.apapl.apapl.messaging.LocalMessenger;
+import nl.uu.cs.is.apapl.apapl.messaging.JadeMessenger;
+import nl.uu.cs.is.apapl.apapl.messaging.LocalMessenger;
 
 
 public class Config extends JFrame implements ActionListener, WindowListener

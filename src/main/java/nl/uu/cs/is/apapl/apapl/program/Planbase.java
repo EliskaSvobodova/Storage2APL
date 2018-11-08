@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.apapl.program;
+package nl.uu.cs.is.apapl.apapl.program;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,20 +6,20 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
-import main.java.nl.uu.cs.is.apapl.apapl.ActivationGoalAchievedException;
-import main.java.nl.uu.cs.is.apapl.apapl.ModuleDeactivatedException;
-import main.java.nl.uu.cs.is.apapl.apapl.Prolog;
-import main.java.nl.uu.cs.is.apapl.apapl.SolutionIterator;
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.data.GoalCompare;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Literal;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Query;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
+import nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.ActivationGoalAchievedException;
+import nl.uu.cs.is.apapl.apapl.ModuleDeactivatedException;
+import nl.uu.cs.is.apapl.apapl.Prolog;
+import nl.uu.cs.is.apapl.apapl.SolutionIterator;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.data.GoalCompare;
+import nl.uu.cs.is.apapl.apapl.data.Literal;
+import nl.uu.cs.is.apapl.apapl.data.Query;
+import nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
 
 /**
- * The base in which the {@link main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq}s the module is currently
+ * The base in which the {@link nl.uu.cs.is.apapl.apapl.plans.PlanSeq}s the module is currently
  * executing are stored. The plan base can be iterated over by an iterator. 
  */
 public class Planbase extends Base implements Iterable<PlanSeq>

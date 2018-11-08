@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.gui;
+package nl.uu.cs.is.apapl.gui;
 
 import java.util.ArrayList;
 

@@ -1,6 +1,6 @@
-package main.java.nl.uu.cs.is.apapl.apapl;
+package nl.uu.cs.is.apapl.apapl;
 
-import main.java.nl.uu.cs.is.apapl.apapl.plans.ExecuteModuleAction;
+import nl.uu.cs.is.apapl.apapl.plans.ExecuteModuleAction;
 
 /**
  * Signals that the execute module action handed over the execution control to
@@ -8,7 +8,7 @@ import main.java.nl.uu.cs.is.apapl.apapl.plans.ExecuteModuleAction;
  * problem. It is merely used to inform deliberation cycle that it has lost
  * execution control and therefore should immediately stop.
  * 
- * @see main.java.nl.uu.cs.is.apapl.apapl.plans.ExecuteModuleAction
+ * @see nl.uu.cs.is.apapl.apapl.plans.ExecuteModuleAction
  */
 public class ModuleDeactivatedException extends Exception
 {

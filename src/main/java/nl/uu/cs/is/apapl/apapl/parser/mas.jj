@@ -5,10 +5,10 @@ options
 } 
 
 PARSER_BEGIN(ParserMAS)
-package main.java.nl.uu.cs.is.apapl.apapl.parser;
+package nl.uu.cs.is.apapl.apapl.parser;
 
-import main.java.nl.uu.cs.is.apapl.apapl.data.*;
-import main.java.nl.uu.cs.is.apapl.apapl.*;
+import nl.uu.cs.is.apapl.apapl.data.*;
+import nl.uu.cs.is.apapl.apapl.*;
 import java.util.LinkedList;
 import java.util.ArrayList;
 import java.io.File;

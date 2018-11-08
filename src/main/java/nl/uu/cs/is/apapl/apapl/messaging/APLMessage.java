@@ -1,11 +1,11 @@
-package main.java.nl.uu.cs.is.apapl.apapl.messaging;
+package nl.uu.cs.is.apapl.apapl.messaging;
 
 import java.util.ArrayList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.Parser;
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLFunction;
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLIdent;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.Parser;
+import nl.uu.cs.is.apapl.apapl.data.APLFunction;
+import nl.uu.cs.is.apapl.apapl.data.APLIdent;
+import nl.uu.cs.is.apapl.apapl.data.Term;
 
 /**
  * A message that can be sent to 2APL modules.

@@ -1,10 +1,10 @@
-package main.java.nl.uu.cs.is.apapl.apapl.data;
+package nl.uu.cs.is.apapl.apapl.data;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Base;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.program.Base;
 
 /**
  * A function term or a logical fact. Although a logical fact is not a term, syntactically

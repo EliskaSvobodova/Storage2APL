@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.apapl;
+package nl.uu.cs.is.apapl.apapl;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,14 +6,14 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Hashtable;
 
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLFunction;
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLIdent;
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLList;
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLNum;
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLVar;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Query;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Base;
+import nl.uu.cs.is.apapl.apapl.data.APLFunction;
+import nl.uu.cs.is.apapl.apapl.data.APLIdent;
+import nl.uu.cs.is.apapl.apapl.data.APLList;
+import nl.uu.cs.is.apapl.apapl.data.APLNum;
+import nl.uu.cs.is.apapl.apapl.data.APLVar;
+import nl.uu.cs.is.apapl.apapl.data.Query;
+import nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.program.Base;
 
 import com.ugos.jiprolog.engine.JIPAtom;
 import com.ugos.jiprolog.engine.JIPCons;
@@ -57,7 +57,7 @@ public class Prolog
 	}
 	
 	/**
-	 * Returns the JIProlog engine. Should only be used by {@link main.java.nl.uu.cs.is.apapl.apapl.SolutionIterator}
+	 * Returns the JIProlog engine. Should only be used by {@link nl.uu.cs.is.apapl.apapl.SolutionIterator}
 	 * @return JIProlog engine
 	 */
 	public JIPEngine getJIP()
@@ -116,7 +116,7 @@ public class Prolog
 	 * 
 	 * @param query the query to perform
 	 * @return the solution
-	 * @deprecated {@link main.java.nl.uu.cs.is.apapl.apapl.Prolog#doTest} should be used instead. This is a more
+	 * @deprecated {@link nl.uu.cs.is.apapl.apapl.Prolog#doTest} should be used instead. This is a more
 	 *             efficient implementation.
 	 */
 	public ArrayList<SubstList<Term>> doQueryAll(Query query)
@@ -138,7 +138,7 @@ public class Prolog
 	
 	/**
 	 * Converts a JIProlog solution to a SubstList<Term>. Should only be used by
-	 * {@link main.java.nl.uu.cs.is.apapl.apapl.SolutionIterator}.
+	 * {@link nl.uu.cs.is.apapl.apapl.SolutionIterator}.
 	 * 
 	 * @param sol JIProlog substitution
 	 * @return converted substitution

@@ -3,15 +3,15 @@ options{
 }
 
 PARSER_BEGIN(PrologParser)
-package main.java.nl.uu.cs.is.apapl.apapl.parser.prolog;
+package nl.uu.cs.is.apapl.apapl.parser.prolog;
 
-import main.java.nl.uu.cs.is.apapl.apapl.beliefinertia.dependencyset.InferenceRules;
+import nl.uu.cs.is.apapl.apapl.beliefinertia.dependencyset.InferenceRules;
 
 /**
  * Basic Prolog parsing for belief inertia. 
  * Collect the predicates and heads of all inference rules and store them in a hashmap indexed by the head
  * Omit built-in predicates, and add "rand" if it is used in the rule.
- * See main.java.nl.uu.cs.is.apapl.apapl.BeliefInertia.BeliefInertia.
+ * See nl.uu.cs.is.apapl.apapl.BeliefInertia.BeliefInertia.
  * 
  * Original JavaCC parser by Bas Testerink, Java code changed by Marc van Zee for belief inertia
  * 

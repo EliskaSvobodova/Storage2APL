@@ -1,8 +1,8 @@
-package main.java.nl.uu.cs.is.apapl.apapl;
+package nl.uu.cs.is.apapl.apapl;
 
 /**
  * Defines an object that can be subject to a substitution.
- * This distinguishing property is used by the {@link main.java.nl.uu.cs.is.apapl.apapl.SubstList}.
+ * This distinguishing property is used by the {@link nl.uu.cs.is.apapl.apapl.SubstList}.
  * In general, terms and plans can be subject to a substitution.
  */
 public interface Substitutable

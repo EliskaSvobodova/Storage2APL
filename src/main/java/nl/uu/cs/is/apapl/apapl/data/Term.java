@@ -1,10 +1,10 @@
-package main.java.nl.uu.cs.is.apapl.apapl.data;
+package nl.uu.cs.is.apapl.apapl.data;
 
 import java.util.ArrayList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.Substitutable;
-import main.java.nl.uu.cs.is.apapl.apapl.UnboundedVarException;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.Substitutable;
+import nl.uu.cs.is.apapl.apapl.UnboundedVarException;
 
 /**
  * A logical term. The root of all term types.

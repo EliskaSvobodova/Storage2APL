@@ -1,12 +1,12 @@
-package main.java.nl.uu.cs.is.apapl.apapl.beliefinertia.dependencyset;
+package nl.uu.cs.is.apapl.apapl.beliefinertia.dependencyset;
 
 import java.util.HashSet;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
-import main.java.nl.uu.cs.is.apapl.apapl.beliefinertia.RuleOperations;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Literal;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Query;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Rule;
+import nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.beliefinertia.RuleOperations;
+import nl.uu.cs.is.apapl.apapl.data.Literal;
+import nl.uu.cs.is.apapl.apapl.data.Query;
+import nl.uu.cs.is.apapl.apapl.program.Rule;
 
 /**
  * A Dependency set build will build the dependency set (what in a name?) of

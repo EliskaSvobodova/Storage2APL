@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.apapl;
+package nl.uu.cs.is.apapl.apapl;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -9,23 +9,23 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLFunction;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Tuple;
-import main.java.nl.uu.cs.is.apapl.apapl.env.AgentListener;
-import main.java.nl.uu.cs.is.apapl.apapl.env.exceptions.AgentException;
-import main.java.nl.uu.cs.is.apapl.apapl.messaging.APLMessage;
-import main.java.nl.uu.cs.is.apapl.apapl.messaging.MessageListener;
-import main.java.nl.uu.cs.is.apapl.apapl.messaging.Messenger;
-import main.java.nl.uu.cs.is.apapl.apapl.parser.ParseModuleException;
-import main.java.nl.uu.cs.is.apapl.apapl.parser.ParsePrologException;
+import nl.uu.cs.is.apapl.apapl.data.APLFunction;
+import nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.data.Tuple;
+import nl.uu.cs.is.apapl.apapl.env.AgentListener;
+import nl.uu.cs.is.apapl.apapl.env.exceptions.AgentException;
+import nl.uu.cs.is.apapl.apapl.messaging.APLMessage;
+import nl.uu.cs.is.apapl.apapl.messaging.MessageListener;
+import nl.uu.cs.is.apapl.apapl.messaging.Messenger;
+import nl.uu.cs.is.apapl.apapl.parser.ParseModuleException;
+import nl.uu.cs.is.apapl.apapl.parser.ParsePrologException;
 
 /**
  * Implements the 2APL multi-agent system (MAS). The MAS keeps track of all the
  * modules that reside in the MAS, the environments in which modules perform
  * actions, and the files by which the modules are specified. The MAS has all
  * the functionality to execute a multi-agent system. The specific strategy by
- * which the modules are executed is implemented by the {@link main.java.nl.uu.cs.is.apapl.apapl.Executor}.
+ * which the modules are executed is implemented by the {@link nl.uu.cs.is.apapl.apapl.Executor}.
  */
 public class APLMAS implements MessageListener {
     /** The list of active modules that reside in this MAS. */
@@ -251,7 +251,7 @@ public class APLMAS implements MessageListener {
     /**
      * Starts the execution of all modules in this MAS. All the modules will be
      * executed by the execution strategy implemented by the
-     * {@link main.java.nl.uu.cs.is.apapl.apapl.Executor}.
+     * {@link nl.uu.cs.is.apapl.apapl.Executor}.
      */
     public void start() {
     	// start the executor

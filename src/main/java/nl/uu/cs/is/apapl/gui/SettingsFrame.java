@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.gui;
+package nl.uu.cs.is.apapl.gui;
 
 import java.awt.Dimension;
 import java.awt.GridLayout;
@@ -30,7 +30,7 @@ public class SettingsFrame extends JFrame implements ActionListener, WindowListe
 		this.gui=gui;
 		
 		useSHBox = new JCheckBox("Use syntax highlighting in overview.",gui.useSH());
-		//m_chkDebugMode = new JCheckBox("Enable debug mode.", main.java.nl.uu.cs.is.apapl.gui.getDebugModeSetting());
+		//m_chkDebugMode = new JCheckBox("Enable debug mode.", nl.uu.cs.is.apapl.gui.getDebugModeSetting());
 		
 		okButton.setActionCommand("ok");
 		cancelButton.setActionCommand("cancel");

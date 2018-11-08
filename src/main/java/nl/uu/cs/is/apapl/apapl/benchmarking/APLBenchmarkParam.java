@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.apapl.benchmarking;
+package nl.uu.cs.is.apapl.apapl.benchmarking;
 
 /**
  * To add an operation to the benchmarker, do the following:

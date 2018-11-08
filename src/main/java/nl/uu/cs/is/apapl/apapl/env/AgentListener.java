@@ -1,6 +1,6 @@
-package main.java.nl.uu.cs.is.apapl.apapl.env;
+package nl.uu.cs.is.apapl.apapl.env;
 
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLFunction;
+import nl.uu.cs.is.apapl.apapl.data.APLFunction;
 
 /**
  * In order to receive percepts-as-notifications connected objects 

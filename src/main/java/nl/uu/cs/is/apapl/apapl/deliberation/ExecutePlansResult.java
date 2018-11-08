@@ -1,8 +1,8 @@
-package main.java.nl.uu.cs.is.apapl.apapl.deliberation;
+package nl.uu.cs.is.apapl.apapl.deliberation;
 
 import java.util.LinkedList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.plans.PlanResult;
+import nl.uu.cs.is.apapl.apapl.plans.PlanResult;
 
 /**
  * The result of the deliberation step in which plans are executed. Contains

@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.apapl;
+package nl.uu.cs.is.apapl.apapl;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,19 +15,19 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
-import main.java.nl.uu.cs.is.apapl.apapl.data.Tuple;
-import main.java.nl.uu.cs.is.apapl.apapl.env.EnvLoader;
-import main.java.nl.uu.cs.is.apapl.apapl.messaging.Messenger;
-import main.java.nl.uu.cs.is.apapl.apapl.parser.ParseException;
-import main.java.nl.uu.cs.is.apapl.apapl.parser.ParseMASException;
-import main.java.nl.uu.cs.is.apapl.apapl.parser.ParseModuleException;
-import main.java.nl.uu.cs.is.apapl.apapl.parser.ParsePrologException;
+import nl.uu.cs.is.apapl.apapl.data.Tuple;
+import nl.uu.cs.is.apapl.apapl.env.EnvLoader;
+import nl.uu.cs.is.apapl.apapl.messaging.Messenger;
+import nl.uu.cs.is.apapl.apapl.parser.ParseException;
+import nl.uu.cs.is.apapl.apapl.parser.ParseMASException;
+import nl.uu.cs.is.apapl.apapl.parser.ParseModuleException;
+import nl.uu.cs.is.apapl.apapl.parser.ParsePrologException;
 
 /**
  * A builder used to construct a multi-agent system. The builder uses parser to
  * parse the mas file and the 2APL files that specify the modules.
  * 
- * @see main.java.nl.uu.cs.is.apapl.apapl.Parser
+ * @see nl.uu.cs.is.apapl.apapl.Parser
  */
 public class APAPLBuilder {
     

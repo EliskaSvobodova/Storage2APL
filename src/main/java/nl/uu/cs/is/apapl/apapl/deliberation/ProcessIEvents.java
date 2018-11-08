@@ -1,28 +1,28 @@
-package main.java.nl.uu.cs.is.apapl.apapl.deliberation;
+package nl.uu.cs.is.apapl.apapl.deliberation;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
-import main.java.nl.uu.cs.is.apapl.apapl.PlanUnifier;
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.beliefinertia.BeliefInertiaParam;
-import main.java.nl.uu.cs.is.apapl.apapl.beliefinertia.ruleselectors.PRruleSelector;
-import main.java.nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarkParam;
-import main.java.nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarker;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Query;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Beliefbase;
-import main.java.nl.uu.cs.is.apapl.apapl.program.PRrule;
-import main.java.nl.uu.cs.is.apapl.apapl.program.PRrulebase;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Planbase;
+import nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.PlanUnifier;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.beliefinertia.BeliefInertiaParam;
+import nl.uu.cs.is.apapl.apapl.beliefinertia.ruleselectors.PRruleSelector;
+import nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarkParam;
+import nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarker;
+import nl.uu.cs.is.apapl.apapl.data.Query;
+import nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
+import nl.uu.cs.is.apapl.apapl.program.Beliefbase;
+import nl.uu.cs.is.apapl.apapl.program.PRrule;
+import nl.uu.cs.is.apapl.apapl.program.PRrulebase;
+import nl.uu.cs.is.apapl.apapl.program.Planbase;
 
 /**
  * The deliberation step in which internal events are processed. For each received internal
  * event one applicable PR-rule (if any) is applied. This way the plans of the module change
  * as they are repaired by the PR-rules. Internal events themselve are stored in
- * the {@link main.java.nl.uu.cs.is.apapl.apapl.APLModule}. Events for which no applicable rule is found are discarded.
+ * the {@link nl.uu.cs.is.apapl.apapl.APLModule}. Events for which no applicable rule is found are discarded.
  */
 public class ProcessIEvents implements DeliberationStep
 {

@@ -1,6 +1,6 @@
-package main.java.nl.uu.cs.is.apapl.apapl.benchmarking;
+package nl.uu.cs.is.apapl.apapl.benchmarking;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLMAS;
+import nl.uu.cs.is.apapl.apapl.APLMAS;
 
 /**
  * This class will start the multi-agent system. wait for the the specified number of seconds, then terminate the

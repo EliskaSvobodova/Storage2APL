@@ -1,20 +1,20 @@
-package main.java.nl.uu.cs.is.apapl.apapl.program;
+package nl.uu.cs.is.apapl.apapl.program;
 
 import java.util.ArrayList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.beliefinertia.RuleOperations;
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLFunction;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Query;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.Plan;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.beliefinertia.RuleOperations;
+import nl.uu.cs.is.apapl.apapl.data.APLFunction;
+import nl.uu.cs.is.apapl.apapl.data.Query;
+import nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.plans.Plan;
+import nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
 
 /**
  * A procedure call rule that is used to generate plans for received messages, events and
- * for abstract actions. A PC-rule consists of a head (an {@link main.java.nl.uu.cs.is.apapl.apapl.data.APLFunction}
- * corresponding to a message, event or an abstract action), guard ({@link main.java.nl.uu.cs.is.apapl.apapl.data.Query})
- * and body ({@link main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq}).
+ * for abstract actions. A PC-rule consists of a head (an {@link nl.uu.cs.is.apapl.apapl.data.APLFunction}
+ * corresponding to a message, event or an abstract action), guard ({@link nl.uu.cs.is.apapl.apapl.data.Query})
+ * and body ({@link nl.uu.cs.is.apapl.apapl.plans.PlanSeq}).
  */
 public class PCrule extends Rule
 {	

@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.apapl.benchmarking;
+package nl.uu.cs.is.apapl.apapl.benchmarking;
 
 import java.io.IOException;
 import java.io.OutputStream;

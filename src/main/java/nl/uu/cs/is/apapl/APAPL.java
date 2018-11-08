@@ -1,22 +1,22 @@
-package main.java.nl.uu.cs.is.apapl;
+package nl.uu.cs.is.apapl;
 
-import main.java.nl.uu.cs.is.apapl.gui.Config;
-import main.java.nl.uu.cs.is.apapl.gui.GUI;
+import nl.uu.cs.is.apapl.gui.Config;
+import nl.uu.cs.is.apapl.gui.GUI;
 
 import java.io.File;
 import java.io.IOException;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APAPLBuilder;
-import main.java.nl.uu.cs.is.apapl.apapl.APLMAS;
-import main.java.nl.uu.cs.is.apapl.apapl.LoadEnvironmentException;
-import main.java.nl.uu.cs.is.apapl.apapl.MultiThreadedExecutor;
-import main.java.nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarkParam;
-import main.java.nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarker;
-import main.java.nl.uu.cs.is.apapl.apapl.messaging.LocalMessenger;
-import main.java.nl.uu.cs.is.apapl.apapl.messaging.Messenger;
-import main.java.nl.uu.cs.is.apapl.apapl.parser.ParseMASException;
-import main.java.nl.uu.cs.is.apapl.apapl.parser.ParseModuleException;
-import main.java.nl.uu.cs.is.apapl.apapl.parser.ParsePrologException;
+import nl.uu.cs.is.apapl.apapl.APAPLBuilder;
+import nl.uu.cs.is.apapl.apapl.APLMAS;
+import nl.uu.cs.is.apapl.apapl.LoadEnvironmentException;
+import nl.uu.cs.is.apapl.apapl.MultiThreadedExecutor;
+import nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarkParam;
+import nl.uu.cs.is.apapl.apapl.benchmarking.APLBenchmarker;
+import nl.uu.cs.is.apapl.apapl.messaging.LocalMessenger;
+import nl.uu.cs.is.apapl.apapl.messaging.Messenger;
+import nl.uu.cs.is.apapl.apapl.parser.ParseMASException;
+import nl.uu.cs.is.apapl.apapl.parser.ParseModuleException;
+import nl.uu.cs.is.apapl.apapl.parser.ParsePrologException;
 
 public class APAPL {
 

@@ -1,8 +1,8 @@
-package main.java.nl.uu.cs.is.apapl.gui;
+package nl.uu.cs.is.apapl.gui;
 
 import javax.swing.table.AbstractTableModel;
 
-import main.java.nl.uu.cs.is.apapl.apapl.messaging.APLMessage;
+import nl.uu.cs.is.apapl.apapl.messaging.APLMessage;
 
 public class MessagesModel extends AbstractTableModel
 {

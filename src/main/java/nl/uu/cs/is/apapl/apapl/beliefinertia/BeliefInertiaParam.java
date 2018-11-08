@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.apapl.beliefinertia;
+package nl.uu.cs.is.apapl.apapl.beliefinertia;
 
 /**
  * Here belief inertia can be enabled/disabled. It is on by default.

@@ -1,23 +1,23 @@
-package main.java.nl.uu.cs.is.apapl.apapl.deliberation;
+package nl.uu.cs.is.apapl.apapl.deliberation;
 
 import java.util.ArrayList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
-import main.java.nl.uu.cs.is.apapl.apapl.NoRuleException;
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLFunction;
-import main.java.nl.uu.cs.is.apapl.apapl.messaging.APLMessage;
-import main.java.nl.uu.cs.is.apapl.apapl.messaging.Messenger;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Beliefbase;
-import main.java.nl.uu.cs.is.apapl.apapl.program.PCrule;
-import main.java.nl.uu.cs.is.apapl.apapl.program.PCrulebase;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Planbase;
+import nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.NoRuleException;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.data.APLFunction;
+import nl.uu.cs.is.apapl.apapl.messaging.APLMessage;
+import nl.uu.cs.is.apapl.apapl.messaging.Messenger;
+import nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
+import nl.uu.cs.is.apapl.apapl.program.Beliefbase;
+import nl.uu.cs.is.apapl.apapl.program.PCrule;
+import nl.uu.cs.is.apapl.apapl.program.PCrulebase;
+import nl.uu.cs.is.apapl.apapl.program.Planbase;
 
 /**
  * The deliberation step in which messages are processed. For each received message
  * one applicable PC-rule (if any) is applied. Messages themselve are stored in
- * the {@link main.java.nl.uu.cs.is.apapl.apapl.APLModule}. Messages for which no applicable rule is found are discarded.
+ * the {@link nl.uu.cs.is.apapl.apapl.APLModule}. Messages for which no applicable rule is found are discarded.
  */
 public class ProcessMessages implements DeliberationStep
 {

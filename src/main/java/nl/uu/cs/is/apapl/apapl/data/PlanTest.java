@@ -1,14 +1,14 @@
-package main.java.nl.uu.cs.is.apapl.apapl.data;
+package nl.uu.cs.is.apapl.apapl.data;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
-import main.java.nl.uu.cs.is.apapl.apapl.ModuleAccessException;
-import main.java.nl.uu.cs.is.apapl.apapl.SolutionIterator;
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Planbase;
+import nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.ModuleAccessException;
+import nl.uu.cs.is.apapl.apapl.SolutionIterator;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.program.Planbase;
 
 /**
  * Corresponds to a test on the plan base. A plan test is part of a
- * {@link main.java.nl.uu.cs.is.apapl.apapl.data.Test} consisting of a composed sequence of goal, belief and
+ * {@link nl.uu.cs.is.apapl.apapl.data.Test} consisting of a composed sequence of goal, belief and
  * plan tests. A plan test succeeds if at least one of the actions to be
  * executed in the next deliberation cycle is of the type described by the plan
  * querying language.

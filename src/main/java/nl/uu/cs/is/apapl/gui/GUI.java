@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.gui;
+package nl.uu.cs.is.apapl.gui;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -30,19 +30,19 @@ import javax.swing.tree.DefaultTreeCellRenderer;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreePath;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APAPLBuilder;
-import main.java.nl.uu.cs.is.apapl.apapl.APLMAS;
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
-import main.java.nl.uu.cs.is.apapl.apapl.LoadEnvironmentException;
-import main.java.nl.uu.cs.is.apapl.apapl.MASChangeListener;
-import main.java.nl.uu.cs.is.apapl.apapl.MASExecutionListener;
-import main.java.nl.uu.cs.is.apapl.apapl.ModuleChangeListener;
-import main.java.nl.uu.cs.is.apapl.apapl.MultiThreadedExecutor;
-import main.java.nl.uu.cs.is.apapl.apapl.deliberation.DeliberationResult;
-import main.java.nl.uu.cs.is.apapl.apapl.messaging.Messenger;
-import main.java.nl.uu.cs.is.apapl.apapl.parser.ParseMASException;
-import main.java.nl.uu.cs.is.apapl.apapl.parser.ParseModuleException;
-import main.java.nl.uu.cs.is.apapl.apapl.parser.ParsePrologException;
+import nl.uu.cs.is.apapl.apapl.APAPLBuilder;
+import nl.uu.cs.is.apapl.apapl.APLMAS;
+import nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.LoadEnvironmentException;
+import nl.uu.cs.is.apapl.apapl.MASChangeListener;
+import nl.uu.cs.is.apapl.apapl.MASExecutionListener;
+import nl.uu.cs.is.apapl.apapl.ModuleChangeListener;
+import nl.uu.cs.is.apapl.apapl.MultiThreadedExecutor;
+import nl.uu.cs.is.apapl.apapl.deliberation.DeliberationResult;
+import nl.uu.cs.is.apapl.apapl.messaging.Messenger;
+import nl.uu.cs.is.apapl.apapl.parser.ParseMASException;
+import nl.uu.cs.is.apapl.apapl.parser.ParseModuleException;
+import nl.uu.cs.is.apapl.apapl.parser.ParsePrologException;
 
 class MASFilenameFilter implements FilenameFilter {
 
@@ -379,7 +379,7 @@ public class GUI extends JFrame implements WindowListener,
 
 	public void newMas()
 	{
-		ImageIcon icon = new ImageIcon(main.java.nl.uu.cs.is.apapl.gui.GUI.class
+		ImageIcon icon = new ImageIcon(nl.uu.cs.is.apapl.gui.GUI.class
 				.getResource("icons/new.png"));
 		String filename = (String) JOptionPane.showInputDialog(this,
 				"Specify name for mas file:", "Create new APLPlatform",

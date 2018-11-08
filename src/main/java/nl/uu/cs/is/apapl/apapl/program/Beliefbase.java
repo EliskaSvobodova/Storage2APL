@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.apapl.program;
+package nl.uu.cs.is.apapl.apapl.program;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -7,22 +7,22 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import main.java.nl.uu.cs.is.apapl.apapl.Logger;
-import main.java.nl.uu.cs.is.apapl.apapl.Parser;
-import main.java.nl.uu.cs.is.apapl.apapl.Prolog;
-import main.java.nl.uu.cs.is.apapl.apapl.SolutionIterator;
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLFunction;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Goal;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Literal;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Query;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
-import main.java.nl.uu.cs.is.apapl.apapl.data.True;
-import main.java.nl.uu.cs.is.apapl.apapl.parser.ParseException;
+import nl.uu.cs.is.apapl.apapl.Logger;
+import nl.uu.cs.is.apapl.apapl.Parser;
+import nl.uu.cs.is.apapl.apapl.Prolog;
+import nl.uu.cs.is.apapl.apapl.SolutionIterator;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.data.APLFunction;
+import nl.uu.cs.is.apapl.apapl.data.Goal;
+import nl.uu.cs.is.apapl.apapl.data.Literal;
+import nl.uu.cs.is.apapl.apapl.data.Query;
+import nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.data.True;
+import nl.uu.cs.is.apapl.apapl.parser.ParseException;
 
 /**
  * The base in which the beliefs of a 2APL module are stored. The beliefs are stored as
- * a Prolog program that is interpreted by a {@link main.java.nl.uu.cs.is.apapl.apapl.Prolog} engine.
+ * a Prolog program that is interpreted by a {@link nl.uu.cs.is.apapl.apapl.Prolog} engine.
  */
 public class Beliefbase extends Base
 {

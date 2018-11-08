@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.gui;
+package nl.uu.cs.is.apapl.gui;
 
 import java.awt.Color;
 import java.util.LinkedList;
@@ -10,10 +10,10 @@ import javax.swing.JSplitPane;
 import javax.swing.JTabbedPane;
 import javax.swing.SwingUtilities;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
-import main.java.nl.uu.cs.is.apapl.apapl.deliberation.DeliberationResult;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Rule;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Rulebase;
+import nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.deliberation.DeliberationResult;
+import nl.uu.cs.is.apapl.apapl.program.Rule;
+import nl.uu.cs.is.apapl.apapl.program.Rulebase;
 
 public class ModuleViewer extends Viewer
 {
@@ -200,8 +200,8 @@ public class ModuleViewer extends Viewer
 			if (d>=0) {
 				String head = s.substring(0,d);
 				s = s.substring(d+1).trim();
-				if (head.equals("main.java.nl.uu.cs.is.apapl.apapl.parser.ParseException")) head = "Parse error";
-				else if (head.equals("main.java.nl.uu.cs.is.apapl.apapl.parser.TokenMgrError")) head = "Parse error";
+				if (head.equals("nl.uu.cs.is.apapl.apapl.parser.ParseException")) head = "Parse error";
+				else if (head.equals("nl.uu.cs.is.apapl.apapl.parser.TokenMgrError")) head = "Parse error";
 				else if (head.equals("com.ugos.JIProlog.engine.JIPSyntaxErrorException")) head = "Parse error in beliefs";
 				r = r + "\\cf7 "+head+":\\cf0 \\par\n";
 			}

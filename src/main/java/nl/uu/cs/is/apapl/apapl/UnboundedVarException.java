@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.apapl;
+package nl.uu.cs.is.apapl.apapl;
 
 /**
  * Signals that a term contains an unbounded variable while it should have been grounded.

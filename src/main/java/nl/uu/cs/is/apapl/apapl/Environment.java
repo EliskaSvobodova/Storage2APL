@@ -1,17 +1,17 @@
-package main.java.nl.uu.cs.is.apapl.apapl;
+package nl.uu.cs.is.apapl.apapl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import main.java.nl.uu.cs.is.apapl.apapl.data.APLFunction;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
-import main.java.nl.uu.cs.is.apapl.apapl.env.AgentListener;
-import main.java.nl.uu.cs.is.apapl.apapl.env.exceptions.ActException;
-import main.java.nl.uu.cs.is.apapl.apapl.env.exceptions.AgentException;
-import main.java.nl.uu.cs.is.apapl.apapl.env.exceptions.EnvironmentInterfaceException;
-import main.java.nl.uu.cs.is.apapl.apapl.env.exceptions.NoEnvironmentException;
+import nl.uu.cs.is.apapl.apapl.data.APLFunction;
+import nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.env.AgentListener;
+import nl.uu.cs.is.apapl.apapl.env.exceptions.ActException;
+import nl.uu.cs.is.apapl.apapl.env.exceptions.AgentException;
+import nl.uu.cs.is.apapl.apapl.env.exceptions.EnvironmentInterfaceException;
+import nl.uu.cs.is.apapl.apapl.env.exceptions.NoEnvironmentException;
 
 /**
  * This class is the superclass for 2APL environments. It implements
@@ -166,7 +166,7 @@ public class Environment {
             // lookup the method
             Method m = this.getClass().getMethod(action.getName(), classParams);
 
-            if (Class.forName("main.java.nl.uu.cs.is.apapl.apapl.data.Term").isAssignableFrom(
+            if (Class.forName("nl.uu.cs.is.apapl.apapl.data.Term").isAssignableFrom(
                     m.getReturnType()) == false)
                 throw new ActException("Wrong return-type");
 

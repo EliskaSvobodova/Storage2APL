@@ -1,10 +1,10 @@
-package main.java.nl.uu.cs.is.apapl.gui;
+package nl.uu.cs.is.apapl.gui;
 
 import java.util.LinkedList;
 
 import javax.swing.JList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.deliberation.DeliberationResult;
+import nl.uu.cs.is.apapl.apapl.deliberation.DeliberationResult;
 
 public class LogWindow extends JList
 {

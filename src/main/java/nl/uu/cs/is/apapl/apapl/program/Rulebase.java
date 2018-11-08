@@ -1,10 +1,10 @@
-package main.java.nl.uu.cs.is.apapl.apapl.program;
+package nl.uu.cs.is.apapl.apapl.program;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
- * The root of all bases that have {@link main.java.nl.uu.cs.is.apapl.apapl.program.Rule}s stored in it. Implements
+ * The root of all bases that have {@link nl.uu.cs.is.apapl.apapl.program.Rule}s stored in it. Implements
  * the functionality to store and iterate over rules stored in the base.
  */
 public abstract class Rulebase<E extends Rule> extends Base implements Iterable<E>, Cloneable

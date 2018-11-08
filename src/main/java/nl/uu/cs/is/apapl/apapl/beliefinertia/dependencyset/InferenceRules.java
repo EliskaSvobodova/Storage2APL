@@ -1,9 +1,9 @@
-package main.java.nl.uu.cs.is.apapl.apapl.beliefinertia.dependencyset;
+package nl.uu.cs.is.apapl.apapl.beliefinertia.dependencyset;
 
 import java.util.HashMap;
 import java.util.HashSet;
 
-import main.java.nl.uu.cs.is.apapl.apapl.beliefinertia.BeliefInertiaParam;
+import nl.uu.cs.is.apapl.apapl.beliefinertia.BeliefInertiaParam;
 
 /**
  * This class can store inference rules as Hash maps with the head of the predicate

@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.apapl.messaging;
+package nl.uu.cs.is.apapl.apapl.messaging;
 
 import jade.core.Agent;
 

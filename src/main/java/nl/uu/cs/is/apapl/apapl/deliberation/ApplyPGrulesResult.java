@@ -1,15 +1,15 @@
-package main.java.nl.uu.cs.is.apapl.apapl.deliberation;
+package nl.uu.cs.is.apapl.apapl.deliberation;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.data.Term;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
-import main.java.nl.uu.cs.is.apapl.apapl.program.PGrule;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.data.Term;
+import nl.uu.cs.is.apapl.apapl.plans.PlanSeq;
+import nl.uu.cs.is.apapl.apapl.program.PGrule;
 
 /**
- * The result of the deliberation step {@link main.java.nl.uu.cs.is.apapl.apapl.deliberation.ApplyPGrules}. Contains
+ * The result of the deliberation step {@link nl.uu.cs.is.apapl.apapl.deliberation.ApplyPGrules}. Contains
  * information about which plans have been generated.
  */
 public class ApplyPGrulesResult extends DeliberationResult

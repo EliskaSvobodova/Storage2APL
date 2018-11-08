@@ -5,7 +5,7 @@
 // Basic Prolog parsing for belief inertia. 
 // Collect the predicates and heads of all inference rules and store them in a hashmap indexed by the head
 // Omit built-in predicates, and add "rand" if it is used in the rule.
-// See main.java.nl.uu.cs.is.apapl.apapl.BeliefInertia.BeliefInertia
+// See nl.uu.cs.is.apapl.apapl.BeliefInertia.BeliefInertia
 //
 // @author Marc van Zee (marcvanzee.nl) - Utrecht University
 //
@@ -19,13 +19,13 @@ options
 } 
 
 PARSER_BEGIN(PrologParser)
-package main.java.nl.uu.cs.is.apapl.apapl.parser.prolog;
+package nl.uu.cs.is.apapl.apapl.parser.prolog;
 
-import main.java.nl.uu.cs.is.apapl.apapl.UnboundedVarException;
-import main.java.nl.uu.cs.is.apapl.apapl.data.*;
-import main.java.nl.uu.cs.is.apapl.apapl.program.*;
-import main.java.nl.uu.cs.is.apapl.apapl.plans.*;
-import main.java.nl.uu.cs.is.apapl.apapl.*;
+import nl.uu.cs.is.apapl.apapl.UnboundedVarException;
+import nl.uu.cs.is.apapl.apapl.data.*;
+import nl.uu.cs.is.apapl.apapl.program.*;
+import nl.uu.cs.is.apapl.apapl.plans.*;
+import nl.uu.cs.is.apapl.apapl.*;
 import java.util.LinkedList;
 import java.util.ArrayList;
 import java.util.HashSet;

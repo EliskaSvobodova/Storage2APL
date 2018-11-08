@@ -1,4 +1,4 @@
-package main.java.nl.uu.cs.is.apapl.gui;
+package nl.uu.cs.is.apapl.gui;
 
 import java.awt.Color;
 import java.awt.Component;
@@ -12,7 +12,7 @@ import javax.swing.ListCellRenderer;
  * Custom cell renderer that formats the color of the log entries according to
  * their severity.
  * 
- * @see main.java.nl.uu.cs.is.apapl.gui.LogWindow
+ * @see nl.uu.cs.is.apapl.gui.LogWindow
  */
 public class LogListCellRenderer extends JTextArea implements ListCellRenderer
 {

@@ -1,12 +1,12 @@
-package main.java.nl.uu.cs.is.apapl.apapl.parser;
+package nl.uu.cs.is.apapl.apapl.parser;
 
 import java.io.File;
 
 /**
  * Signals that an exception has occurred while parsing the module specification.
- * A ParsePrologException is raised by the {@link main.java.nl.uu.cs.is.apapl.apapl.Parser} in case of a syntax
+ * A ParsePrologException is raised by the {@link nl.uu.cs.is.apapl.apapl.Parser} in case of a syntax
  * error. It is also raised in case of an I/O error while reading the specification 
- * file. This exception extends the original {@link main.java.nl.uu.cs.is.apapl.apapl.parser.ParseException} by
+ * file. This exception extends the original {@link nl.uu.cs.is.apapl.apapl.parser.ParseException} by
  * providing extra information about the file that caused the error.
  */
 public class ParsePrologException extends ParseException

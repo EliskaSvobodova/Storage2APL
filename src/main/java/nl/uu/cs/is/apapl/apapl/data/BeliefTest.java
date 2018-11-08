@@ -1,14 +1,14 @@
-package main.java.nl.uu.cs.is.apapl.apapl.data;
+package nl.uu.cs.is.apapl.apapl.data;
 
-import main.java.nl.uu.cs.is.apapl.apapl.APLModule;
-import main.java.nl.uu.cs.is.apapl.apapl.ModuleAccessException;
-import main.java.nl.uu.cs.is.apapl.apapl.SolutionIterator;
-import main.java.nl.uu.cs.is.apapl.apapl.SubstList;
-import main.java.nl.uu.cs.is.apapl.apapl.program.Beliefbase;
+import nl.uu.cs.is.apapl.apapl.APLModule;
+import nl.uu.cs.is.apapl.apapl.ModuleAccessException;
+import nl.uu.cs.is.apapl.apapl.SolutionIterator;
+import nl.uu.cs.is.apapl.apapl.SubstList;
+import nl.uu.cs.is.apapl.apapl.program.Beliefbase;
 
 /**
  * Corresponds to a test on the belief base. A belief test is part of a 
- * {@link main.java.nl.uu.cs.is.apapl.apapl.data.Test} consisting of a composed sequence of goal and
+ * {@link nl.uu.cs.is.apapl.apapl.data.Test} consisting of a composed sequence of goal and
  * belief tests.
  */
 public class BeliefTest extends Test
