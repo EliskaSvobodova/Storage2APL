@@ -62,6 +62,8 @@ public class EnvLoader {
 		// 4. load the class
 		URLClassLoader loader = new URLClassLoader(new URL[]{url});
 		Class<?> envInterfaceClass = null;
+		System.out.println(url);
+		System.out.println(loader);
 		try {
 			envInterfaceClass = loader.loadClass(mainClass);
 		} catch (ClassNotFoundException e) {
