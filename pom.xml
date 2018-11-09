@@ -18,42 +18,45 @@
         <exec.mainClass>nl.uu.cs.is.apapl.APAPL</exec.mainClass>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>apapl-dependencies</id>
-            <url>file://${project.basedir}/src/main/resources</url>
-        </repository>
-    </repositories>
-
     <dependencies>
         <dependency>
             <groupId>JIProlog</groupId>
             <artifactId>JIProlog</artifactId>
             <version>1.0.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/jiprolog/JIProlog.jar</systemPath>
         </dependency>
 
         <dependency>
             <groupId>http</groupId>
             <artifactId>http</artifactId>
             <version>1.0.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/jade/http.jar</systemPath>
         </dependency>
 
         <dependency>
             <groupId>iiop</groupId>
             <artifactId>iiop</artifactId>
             <version>1.0.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/jade/iiop.jar</systemPath>
         </dependency>
 
         <dependency>
             <groupId>jade</groupId>
             <artifactId>jade</artifactId>
             <version>1.0.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/jade/jade.jar</systemPath>
         </dependency>
 
         <dependency>
             <groupId>jadeTools</groupId>
             <artifactId>jadeTools</artifactId>
             <version>1.0.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/jade/jadeTools.jar</systemPath>
         </dependency>
     </dependencies>
 
