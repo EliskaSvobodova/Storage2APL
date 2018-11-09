@@ -1,4 +1,4 @@
-package nl.uu.cs.is.apapl.blockworld;
+package nl.uu.cs.is.apapl.environments.blockworld;
 
 /*
  3APL Blockworld program by Jelle Herold, copyright 2003.
@@ -10,7 +10,7 @@ package nl.uu.cs.is.apapl.blockworld;
 
 import java.awt.Point;
 
-import nl.uu.cs.is.apapl.blockworld.lib.Signal;
+import nl.uu.cs.is.apapl.environments.blockworld.lib.Signal;
 
 // / Agent representation in Env. This doubles as a plugin instance.
 public class Agent 

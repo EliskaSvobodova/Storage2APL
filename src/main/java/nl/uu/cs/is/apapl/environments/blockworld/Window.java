@@ -1,8 +1,7 @@
-package nl.uu.cs.is.apapl.blockworld;
+package nl.uu.cs.is.apapl.environments.blockworld;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -26,12 +25,11 @@ import javax.swing.JTable;
 import javax.swing.table.AbstractTableModel;
 
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JToggleButton;
 import javax.swing.JToolBar;
 import java.util.ArrayList;
 
-import nl.uu.cs.is.apapl.blockworld.lib.Signal;
+import nl.uu.cs.is.apapl.environments.blockworld.lib.Signal;
 
 /// statistics view
 class Statistics extends AbstractTableModel implements Observer {

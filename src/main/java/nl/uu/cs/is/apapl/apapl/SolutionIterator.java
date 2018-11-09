@@ -5,9 +5,9 @@ import java.util.Iterator;
 import nl.uu.cs.is.apapl.apapl.data.Query;
 import nl.uu.cs.is.apapl.apapl.data.Term;
 
-import com.ugos.jiprolog.engine.JIPSyntaxErrorException;
-import com.ugos.jiprolog.engine.JIPQuery;
-import com.ugos.jiprolog.engine.JIPTerm;
+import com.ugos.JIProlog.engine.JIPSyntaxErrorException;
+import com.ugos.JIProlog.engine.JIPQuery;
+import com.ugos.JIProlog.engine.JIPTerm;
 
 /**
  * Implements an iterator over all solutions of a query performed on the Prolog engine.

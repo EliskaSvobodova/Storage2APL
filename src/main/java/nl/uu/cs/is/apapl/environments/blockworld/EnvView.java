@@ -1,4 +1,4 @@
-package nl.uu.cs.is.apapl.blockworld;
+package nl.uu.cs.is.apapl.environments.blockworld;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -6,9 +6,6 @@ import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.Image;
 import java.awt.image.ImageProducer;
-import java.net.URL;
-import java.net.MalformedURLException;
-import java.io.IOException;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
@@ -21,8 +18,8 @@ import java.util.Observer;
 
 import javax.swing.JPanel;
 
-import nl.uu.cs.is.apapl.blockworld.lib.ObsVectListener;
-import nl.uu.cs.is.apapl.blockworld.lib.Signal;
+import nl.uu.cs.is.apapl.environments.blockworld.lib.ObsVectListener;
+import nl.uu.cs.is.apapl.environments.blockworld.lib.Signal;
 
 /// Grid view of agent enviroment ('world')
 class EnvView extends JPanel implements ObsVectListener, Observer {

@@ -14,18 +14,17 @@ import nl.uu.cs.is.apapl.apapl.data.APLVar;
 import nl.uu.cs.is.apapl.apapl.data.Query;
 import nl.uu.cs.is.apapl.apapl.data.Term;
 import nl.uu.cs.is.apapl.apapl.program.Base;
-
-import com.ugos.jiprolog.engine.JIPAtom;
-import com.ugos.jiprolog.engine.JIPCons;
-import com.ugos.jiprolog.engine.JIPEngine;
-import com.ugos.jiprolog.engine.JIPFunctor;
-import com.ugos.jiprolog.engine.JIPList;
-import com.ugos.jiprolog.engine.JIPNumber;
-import com.ugos.jiprolog.engine.JIPSyntaxErrorException;
-import com.ugos.jiprolog.engine.JIPQuery;
-import com.ugos.jiprolog.engine.JIPTerm;
-import com.ugos.jiprolog.engine.JIPTermParser;
-import com.ugos.jiprolog.engine.JIPVariable;
+import com.ugos.JIProlog.engine.JIPAtom;
+import com.ugos.JIProlog.engine.JIPCons;
+import com.ugos.JIProlog.engine.JIPEngine;
+import com.ugos.JIProlog.engine.JIPFunctor;
+import com.ugos.JIProlog.engine.JIPList;
+import com.ugos.JIProlog.engine.JIPNumber;
+import com.ugos.JIProlog.engine.JIPSyntaxErrorException;
+import com.ugos.JIProlog.engine.JIPQuery;
+import com.ugos.JIProlog.engine.JIPTerm;
+import com.ugos.JIProlog.engine.JIPTermParser;
+import com.ugos.JIProlog.engine.JIPVariable;
 
 /**
  * Convenience class that provides the interface to the JIProlog engine.
@@ -315,7 +314,7 @@ public class Prolog
 			    f.getParams().getHead() instanceof JIPNumber  )
 			{
 				JIPNumber n = (JIPNumber)f.getParams().getHead();
-				return new APLNum( - n.getDoubleValue());
+				return new APLNum( - n.getValue());
 			}
 			// Normal functor
 			else
@@ -331,7 +330,7 @@ public class Prolog
 		}
 		else if (t instanceof JIPNumber) {
 			JIPNumber n = (JIPNumber)t;
-			return new APLNum(n.getDoubleValue());
+			return new APLNum(n.getValue());
 		}
 		
 		// Should not return null, case ommitted?

@@ -1,4 +1,4 @@
-package nl.uu.cs.is.apapl.blockworld;
+package nl.uu.cs.is.apapl.environments.blockworld;
 
 import java.awt.Point;
 

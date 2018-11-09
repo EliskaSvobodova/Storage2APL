@@ -1,4 +1,4 @@
- package nl.uu.cs.is.apapl.blockworld;
+ package nl.uu.cs.is.apapl.environments.blockworld;
 
 /*
  3APL Blockworld program by Jelle Herold, copyright 2003.
@@ -17,7 +17,6 @@ import nl.uu.cs.is.apapl.apapl.data.*;
 import java.awt.Point;
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Vector;
 import java.util.LinkedList;
 import javax.swing.SwingUtilities;
@@ -31,9 +30,9 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 
-import nl.uu.cs.is.apapl.blockworld.lib.ObsVectListener;
-import nl.uu.cs.is.apapl.blockworld.lib.Signal;
-import nl.uu.cs.is.apapl.blockworld.lib.ObsVect;
+import nl.uu.cs.is.apapl.environments.blockworld.lib.ObsVectListener;
+import nl.uu.cs.is.apapl.environments.blockworld.lib.Signal;
+import nl.uu.cs.is.apapl.environments.blockworld.lib.ObsVect;
 
  public class Env extends Environment implements ObsVectListener
 {

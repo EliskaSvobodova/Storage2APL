@@ -1,4 +1,4 @@
-package nl.uu.cs.is.apapl.blockworld.lib;
+package nl.uu.cs.is.apapl.environments.blockworld.lib;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;

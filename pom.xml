@@ -6,7 +6,7 @@
 
     <groupId>nl.uu.cs.is.apapl</groupId>
     <artifactId>apapl</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <properties>
         <start-class>nl.uu.cs.is.apapl.APAPL</start-class>
@@ -15,6 +15,7 @@
         <java.version>1.8</java.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <exec.mainClass>nl.uu.cs.is.apapl.APAPL</exec.mainClass>
     </properties>
 
     <repositories>
@@ -26,8 +27,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>jipconsole</groupId>
-            <artifactId>jipconsole</artifactId>
+            <groupId>JIProlog</groupId>
+            <artifactId>JIProlog</artifactId>
             <version>1.0.0</version>
         </dependency>
 
@@ -87,45 +88,159 @@
         </contributor>
     </contributors>
 
+    <organization>
+        <name>Intelligent Systems, Utrecht University</name>
+        <url>https://www.uu.nl/en/research/artificial-intelligence/intelligent-systems</url>
+    </organization>
+
     <build>
         <plugins>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.1.1</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
                 <executions>
                     <execution>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
+                        <id>2APL</id>
+                        <goals><goal>jar</goal></goals>
+                        <phase>package</phase>
                         <configuration>
-                            <mainClass>nl.uu.cs.is.apapl.APAPL</mainClass>
+                            <finalName>2APL</finalName>
+                            <archive>
+                                <manifestFile>src/main/resources/META-INF/Manifest.txt</manifestFile>
+                            </archive>
+                            <excludes>
+                                <exclude>nl/uu/cs/is/apapl/environments/*</exclude>
+                            </excludes>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>blockworld-environment</id>
+                        <goals><goal>jar</goal></goals>
+                        <phase>package</phase>
+                        <configuration>
+                            <finalName>blockworld</finalName>
+                            <archive>
+                                <manifestFile>src/main/resources/META-INF/blockworld/Manifest.txt</manifestFile>
+                            </archive>
+                            <includes>
+                                <include>nl/uu/cs/is/apapl/environments/blockworld/*.class</include>
+                                <include>nl/uu/cs/is/apapl/environments/blockworld/lib/*</include>
+                                <include>nl/uu/cs/is/apapl/environments/blockworld/images/*</include>
+                            </includes>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>simple-environment</id>
+                        <goals><goal>jar</goal></goals>
+                        <phase>package</phase>
+                        <configuration>
+                            <finalName>env</finalName>
+                            <archive>
+                                <manifestFile>src/main/resources/META-INF/simple/Manifest.txt</manifestFile>
+                            </archive>
+                            <includes>
+                                <include>nl/uu/cs/is/apapl/environments/simple/*</include>
+                            </includes>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
 
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>2.4</version>
-                <configuration>
-                    <archive>
-                        <manifestFile>src/main/resources/META-INF/Manifest.txt</manifestFile>
-                    </archive>
-                </configuration>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <id>copy-blockworld-to-explorer-and-carry</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${basedir}/examples/explorer and carrier</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${project.build.directory}</directory>
+                                    <include>blockworld.jar</include>
+                                    <filtering>false</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>copy-blockworld-to-harry-and-sally</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${basedir}/examples/harry and sally</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${project.build.directory}</directory>
+                                    <include>blockworld.jar</include>
+                                    <filtering>false</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>copy-env-to-basic</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${basedir}/examples/basic 2apl setup</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${project.build.directory}</directory>
+                                    <include>env.jar</include>
+                                    <filtering>false</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>copy-env-to-ircbot</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${basedir}/examples/ircbot</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${project.build.directory}</directory>
+                                    <include>env.jar</include>
+                                    <filtering>false</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
+
         <resources>
             <resource>
                 <directory>src/main/java/nl/uu/cs/is/apapl/gui/icons</directory>
-                <targetPath>${build.outputDirectory}/nl/uu/cs/is/apapl/gui/icons</targetPath>
+                <targetPath>${project.build.outputDirectory}/nl/uu/cs/is/apapl/gui/icons</targetPath>
+            </resource>
+            <resource>
+                <directory>src/main/java/nl/uu/cs/is/apapl/environments/blockworld/images</directory>
+                <targetPath>${project.build.outputDirectory}/nl/uu/cs/is/apapl/environments/blockworld/images</targetPath>
+            </resource>
+            <resource>
+                <directory>src/main/resources/license</directory>
+                <targetPath>${project.build.outputDirectory}</targetPath>
             </resource>
         </resources>
     </build>
-
-
-
-    
 </project>

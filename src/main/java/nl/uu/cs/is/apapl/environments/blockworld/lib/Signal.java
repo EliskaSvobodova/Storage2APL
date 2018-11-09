@@ -1,4 +1,4 @@
-package nl.uu.cs.is.apapl.blockworld.lib;
+package nl.uu.cs.is.apapl.environments.blockworld.lib;
 
 /// works like an observable, allows emitting signals
 import java.util.Observable;
