@@ -61,6 +61,7 @@ the code with Eclipse Oxygen is available on the
 
 If the Maven settings are not automatically recognized, you will have to configure
 the build manually. Some pointers for this are:
+
 1. Add all the JAR files in `src/main/resources/jade` and `src/main/
 resources/jiprolog` to your classpath. 
 1. Set `src/main/java` as your source directory
