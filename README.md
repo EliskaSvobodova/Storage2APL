@@ -41,9 +41,9 @@ Building and packaging is handled by maven.
 
 There are three ways to run the code:
 
-1) Download the JAR and execute it directly (no access to source code)
-2) Checkout the project from source control in your favorite IDE
-3) Checkout the project from source control manually, and build using maven
+1. Download the JAR and execute it directly (no access to source code)
+1. Checkout the project from source control in your favorite IDE
+1. Checkout the project from source control manually, and build using maven
 
 The first option will not be described here - as running a JAR file is a
 relatively standard operation and differs from operating system to 
@@ -61,10 +61,10 @@ the code with Eclipse Oxygen is available on the
 
 If the Maven settings are not automatically recognized, you will have to configure
 the build manually. Some pointers for this are:
-1) Add all the JAR files in `src/main/resources/jade` and `src/main/
+1. Add all the JAR files in `src/main/resources/jade` and `src/main/
 resources/jiprolog` to your classpath. 
-2) Set `src/main/java` as your source directory
-3) Run `src/main/java/nl/uu/cs/is/apapl/APAPL.java` as your main class
+1. Set `src/main/java` as your source directory
+1. Run `src/main/java/nl/uu/cs/is/apapl/APAPL.java` as your main class
 
 In some cases, images are loaded, which are located in the source directory,
 right next to the source code. If your IDE gives a null pointer exception after
