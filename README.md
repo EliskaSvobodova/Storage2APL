@@ -30,17 +30,14 @@ Instructions for using this application can be found on [http://www.projects.sci
 ## Dependencies
 This code has been tested in **Java 1.8**. The code was originally 
 developed in Java 1.6, but since the transition to GIT, this was not
-tested. 
+tested. Java versions more recent than 1.8 **do not work**, and there 
+are no plans to support these versions in the future.
 
-The code was verified **not to run** in Java 10, and there is currently
-no work being done towards making this project Java 10 compatible. 
-
-The last tested version was **Java 1.8** and this is the recommended
-Java JRE to run this project with.
+The recommended JDK / JRE is version 1.8.
 
 ## Installing the Code
 The code for this project is controlled by Git (previously subversion). 
-Building and packeging is handled by maven.
+Building and packaging is handled by maven.
 
 There are three ways to run the code:
 
@@ -56,32 +53,40 @@ releases page.
 ## Opening this project in an IDE
 Since this project is controlled by Maven, most IDE's should be able
 to import this project automatically. For most IDE's, you'll click
-`file` --> `open` --> `checkout from source control (git)` (or something
+`file` --> `import` `checkout from source control (git)` (or something
 similar), which will automatically download the code, if you give it the
-git URL of this repository.
+git URL of this repository. An extensive guide is available for setting up
+the code with Eclipse Oxygen is available on the 
+[2APL website](http://www.projects.science.uu.nl/Net2APL/prototype.html).
 
-If the Maven settings are not automatically recognized:
+If the Maven settings are not automatically recognized, you will have to configure
+the build manually. Some pointers for this are:
 1) Add all the JAR files in `src/main/resources/jade` and `src/main/
 resources/jiprolog` to your classpath. 
 2) Set `src/main/java` as your source directory
 3) Run `src/main/java/nl/uu/cs/is/apapl/APAPL.java` as your main class
 
+In some cases, images are loaded, which are located in the source directory,
+right next to the source code. If your IDE gives a null pointer exception after
+manual setup, make sure during building, the images are moved to sit right next
+to the compiled class files.
+
 ## Checking out manually
 You can manually download this project from git, using
 
-`$ git clone <...>`
+```bash
+$ git clone https://bitbucket.org/goldenagents/2apl.git
+$ cd 2apl
+$ mvn install
+``` 
 
-Then, `cd` into the cloned directory and type
-
-`$ mvn install` 
-
-to compile the code, or,
+The last command compiles the code. Alternatively, 
 
 `$ mvn install exec:java`
 
-to compile the code and run the main class automatically.
+can be used to compile the code and run the main class automatically.
 
-This process requires GIT and Maven (setup to use the Java 1.8 JRE / JDK).
+This process requires Git and Maven (setup to use the Java 1.8 JRE / JDK).
 
 
 
