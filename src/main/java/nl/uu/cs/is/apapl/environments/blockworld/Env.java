@@ -314,6 +314,25 @@ import nl.uu.cs.is.apapl.environments.blockworld.lib.ObsVect;
 		return wrapBoolean(true);
 	}
 	
+	// completely remove the bomb
+	public Term disarm( String sAgent ) throws ExternalActionFailedException
+	{
+		Agent agent = getAgent(sAgent);
+		agent.signalDropBomb.emit();
+		TypeObject bomb = agent.senseBomb();
+		if( bomb == null)
+		{
+			writeToLog( "Drop bomb failed" );
+			throw new ExternalActionFailedException("Drop bomb failed");
+		}
+		Point pos = agent.getPosition();
+		agent.dropBomb();
+		agent.signalDisarmBombSucces.emit();
+		validatewindow();
+		m_window.repaint();
+		return wrapBoolean(true);
+	}
+	
 	// What is the agent his Sense Range
 	public Term getSenseRange(String agent)
 	{
