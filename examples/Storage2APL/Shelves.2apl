@@ -1,10 +1,29 @@
 include: person.2apl;
 
 beliefs:
-	start(5, 5).
-	shelf1(none).
-	shelf2(none).
+	shelves([]).
+	
+
+beliefupdates:
+	{ shelves(LIST) } AddFree(X, Y) {shelves([[free, X, Y] | LIST])}
 
 
-beliefUpdates:
-	{ Shelf(none) } StoreProduct(Product, Shelf) { Shelf(X) }
+pcrules:
+	event(wallAt(X, Y), blockworld) <- true |
+	{
+		AddFree(X, Y);
+	}
+	
+	message(im, request, La, On, _) <- true |
+	{
+		shelves(L);
+		assign(L);
+	}
+	
+	assign(L) <- true |
+	{
+		if (L = [[free, X, Y] | REST]) then
+			send(im, inform, shelf(X, Y));
+		else
+			assign(REST);
+	}

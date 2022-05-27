@@ -7,4 +7,5 @@
   <agent name="im" file="IncomingsManager.2apl"/>
   <agent name="rider1" file="Rider.2apl"/>
   <agent name="rider2" file="Rider.2apl"/>
+  <agent name="shelves" file="Shelves.2apl"/>
 </apaplmas>
