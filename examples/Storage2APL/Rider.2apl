@@ -1,45 +1,38 @@
-include: person.2apl;
+include: moving.2apl;
 
 
 beliefs:
+	prob(P) :- is(X, rand), X < P.
 
 
 beliefupdates:
-	{ bomb(X,Y) }         RemoveBomb(X,Y) { not bomb(X,Y) }
-  	{ not carry( bomb ) } PickUp( )       { carry( bomb ) }
-  	{ true }              AddBomb(X,Y)    { bomb(X,Y) }
+  { at(OLDPOS) }         UpdatePosition(POS)  { not at(OLDPOS), at(POS) }
+  { true }               UpdatePosition(POS)  { at(POS) }
 
 
 goals:
+	wander.
 
 
 plans:
 	B(is( X, int( random( 15 ) ) ));
     B(is( Y, int( random( 15 ) ) ));
     @blockworld( enter( X, Y, orange ), _ );
- 
- 
+
+
 pcrules:
 	message( im, inform, La, On, bombAt(X, Y) ) <- true |
 	{
-		AddBomb(X, Y);
-		adoptz(task(X, Y));
+		create(assigned_rider, ar);
+		ar.adoptz(task(X, Y));
+		ar.execute(B(done(X, Y)));
+		send(im, inform, done(X, Y));
 	}
 
 
 pgrules:
-	task(X, Y) <- true |
+	wander <- prob(0.5) |
 	{
-		goto(X, Y);
-		@blockworld( pickup(), _ );
-		PickUp();
-		RemoveBomb(X, Y);
-		send(im, inform, took_over(X, Y));
-		
-		goto(15, 15);
-		@blockworld( disarm(), _ );
-		-carry(bomb);
-		goto(14, 15);
-		dropgoal(task(X, Y));
-		send(im, inform, done(X, Y));
+		gotoRandomPos(15,15);
 	}
+	

@@ -20,3 +20,11 @@ pcrules:
       goto( X, Y );
     }
   }
+  
+  
+  gotoRandomPos(MaxX, MaxY) <- true |
+  {
+    B(is( X, int( random( MaxX ) ) )); 
+    B(is( Y, int( random( MaxY ) ) ));
+    goto(X, Y);
+  }
