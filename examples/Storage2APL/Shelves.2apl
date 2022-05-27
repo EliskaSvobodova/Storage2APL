@@ -1,0 +1,10 @@
+include: person.2apl;
+
+beliefs:
+	start(5, 5).
+	shelf1(none).
+	shelf2(none).
+
+
+beliefUpdates:
+	{ Shelf(none) } StoreProduct(Product, Shelf) { Shelf(X) }

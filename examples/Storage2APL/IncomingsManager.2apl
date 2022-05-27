@@ -1,0 +1,54 @@
+include: person.2apl;
+
+beliefs:
+	start(0,0).
+	free(rider1).
+	free(rider2).
+	clean_ig(blockworld) :- not bomb(1, 1).
+	
+
+beliefupdates:
+	{ bomb(X,Y) }         RemoveBomb(X,Y)    { not bomb(X,Y) }
+  	{ not carry( bomb ) } PickUp( )          { carry( bomb ) }
+  	{ true }              AddBomb(X,Y)       { bomb(X,Y) }
+  	{ free(RIDER) }		  AssignRider(RIDER) { not free(RIDER) }
+
+
+goals:
+	clean_ig(blockworld).
+
+
+plans:
+  B(start(X,Y));
+  @blockworld( enter( X, Y, blue ), _ );
+  @blockworld( senseBombs(), BOMBS );
+  if B(BOMBS = [[default, 1, 1] | REST]) then
+  {
+  	AddBomb(1, 1);
+  }
+  
+
+pgrules:
+  clean_ig( blockworld ) <- not assigned and free(RIDER) |
+  {
+  	send(RIDER, inform, bombAt(1, 1));
+  	AssignRider(RIDER);
+  	+assigned;
+  }
+  
+
+pcrules:
+	event(bombAt(1, 1), blockworld) <- true |
+	{
+		AddBomb(1, 1);
+		adoptz(clean_ig(blockworld));
+	}
+	
+	message(RIDER, inform, La, On, took_over(X, Y)) <- true | {
+		-assigned;
+		RemoveBomb(X, Y);
+	}
+	
+	message(RIDER, inform, La, On, done(X, Y)) <- true | {
+		+free(RIDER);
+	}
