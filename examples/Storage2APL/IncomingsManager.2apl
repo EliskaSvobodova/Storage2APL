@@ -1,17 +1,22 @@
 include: person.2apl;
 
+
 beliefs:
 	start(0,0).
-	free(rider1).
-	free(rider2).
+	state(waiting).
+	worker(rider1, free).
+	worker(rider2, free).
 	clean_ig(blockworld) :- not bomb(1, 1).
 
 
-beliefupdates:
-	{ bomb(X,Y) }         RemoveBomb(X,Y)    { not bomb(X,Y) }
-  	{ not carry( bomb ) } PickUp( )          { carry( bomb ) }
-  	{ true }              AddBomb(X,Y)       { bomb(X,Y) }
-  	{ free(RIDER) }		  AssignRider(RIDER) { not free(RIDER) }
+beliefupdates:  	
+  	{ worker(R, free) }		AssignRider(R)			{ not worker(R, free), worker(R, on_task) }
+  	{ worker(R, on_task) }	FreeRider(R)			{ not worker(R, on_task), worker(R, free) }
+  	
+  	{ state(waiting) } 		LookingForShelfStatus() { not state(waiting), state(assignShelf) }
+  	{ state(assignShelf) }	AssignRiderStatus() 	{ not state(assignShelf), state(assignRider) }
+  	{ state(assignRider) }	WaitForPickupStatus()	{ not state(assignRider), state(waitForPickup) }
+  	{ state(waitForPickup)}	WaitingStatus()			{ not state(waitForPickup), state(waiting) }
 
 
 goals:
@@ -24,40 +29,43 @@ plans:
   @blockworld( senseBombs(), BOMBS );
   if B(BOMBS = [[default, 1, 1] | REST]) then
   {
-  	AddBomb(1, 1);
+  	+ bomb(1, 1);
   }
   
 
 pgrules:
-  clean_ig( blockworld ) <- not assigned and target_shelf(X, Y) and free(RIDER) |
-  {
-	send(RIDER, inform, stockProduct(X, Y));
-	AssignRider(RIDER);
-	+assigned;
-  }
-  
-  clean_ig( blockworld ) <- not assigned and free(RIDER) |
-  {
-  	send(shelves, request, stupid);
-  }
-  
+	clean_ig( blockworld ) <- state(waiting) and worker(RIDER, free) |
+	{
+  		send(shelves, request, stupid(RIDER));
+  		LookingForShelfStatus();
+  	}
+  	
+  	clean_ig( blockworld ) <- state(assignRider) and bomb(Xb, Yb) and target_shelf(Xs, Ys) and worker(RIDER, free) |
+  	{
+		send(RIDER, inform, stockProduct(Xb, Yb, Xs, Ys));
+		- target_shelf(Xs, Ys);
+		AssignRider(RIDER);
+		WaitForPickupStatus();
+  	}
+
 
 pcrules:
 	event(bombAt(1, 1), blockworld) <- true |
 	{
-		AddBomb(1, 1);
+		+ bomb(1, 1);
 		adoptz(clean_ig(blockworld));
 	}
 	
 	message(shelves, inform, La, On, shelf(X, Y)) <- true | {
-		+target_shelf(X, Y);
+		+ target_shelf(X, Y);
+		AssignRiderStatus();
 	}
 	
 	message(RIDER, inform, La, On, took_over(X, Y)) <- true | {
-		-assigned;
-		RemoveBomb(X, Y);
+		- bomb(X, Y);
+		WaitingStatus();
 	}
 	
-	message(RIDER, inform, La, On, done(X, Y)) <- true | {
-		+free(RIDER);
+	message(RIDER, inform, La, On, done(Xb, Yb, Xs, Ys)) <- true | {
+		FreeRider(RIDER);
 	}

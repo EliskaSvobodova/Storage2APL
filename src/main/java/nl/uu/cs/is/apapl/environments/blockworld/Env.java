@@ -545,8 +545,9 @@ import nl.uu.cs.is.apapl.environments.blockworld.lib.ObsVect;
 		{
 			// Changed SA: I got no idea why there is always 1 agent which does not exists, 
 			// but this fixes the exceptions
-			if ((a.getPosition() != null) && (ptPosition.distance(a.getPosition()) <= getSenseRange()))
-				targetAgents.add(a.getName());
+			// remove this so agents not in the blockworld can receive events
+			//if ((a.getPosition() != null) && (ptPosition.distance(a.getPosition()) <= getSenseRange()))
+			targetAgents.add(a.getName());
 		}
 
 		writeToLog("EVENT: "+parm1+"("+nX+","+nY+")"+" to "+targetAgents);
@@ -726,7 +727,7 @@ import nl.uu.cs.is.apapl.environments.blockworld.lib.ObsVect;
 	// Is the position free?
 	public synchronized boolean isFree( final Point position ) 
 	{
-		return (isStone( position )) == null && (isAgent( position ) == null);
+		return isAgent( position ) == null;
 	}
 	
 	 // Check for agent at coordinate. \return Null if there is no agent at the
@@ -807,7 +808,7 @@ import nl.uu.cs.is.apapl.environments.blockworld.lib.ObsVect;
 	}
 	
 	// remove stone at position
-	public synchronized boolean removeStone( Point position )
+	/*public synchronized boolean removeStone( Point position )
 	{
 		synchronized(_stones) {
     	    // find stone in stones list
@@ -832,7 +833,7 @@ import nl.uu.cs.is.apapl.environments.blockworld.lib.ObsVect;
 		}
 		notifyEvent("wallRemovedAt", position);
 		return false;
-	}
+	}*/
 	
 	// remove trap at position
 	public synchronized boolean removeTrap( Point position )
@@ -889,7 +890,8 @@ import nl.uu.cs.is.apapl.environments.blockworld.lib.ObsVect;
 					+ position + ", " + m_size );
 
 		// is position clear of other stuff
-		if( isBomb( position ) != null ||  isStone( position ) != null ||  isTrap( position ) != null )
+		// if( isBomb( position ) != null ||  isStone( position ) != null ||  isTrap( position ) != null )
+		if( isBomb( position ) != null ||  isTrap( position ) != null )
 			return false;
 
 		// all clear, accept bomb

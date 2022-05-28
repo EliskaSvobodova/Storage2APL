@@ -1,25 +1,14 @@
 include: person.2apl;
 
 
-beliefs:
-
-
-beliefupdates:
-	{ bomb(X,Y) }         RemoveBomb(X,Y) { not bomb(X,Y) }
-  	{ not carry( bomb ) } PickUp( )       { carry( bomb ) }
-  	{ true }              AddBomb(X,Y)    { bomb(X,Y) }
-
-
 pgrules:
-	task(X, Y) <- true |
+	task(Xb, Yb, Xs, Ys) <- true |
 	{
-		goto(X, Y);
+		goto(Xb, Yb);
 		@blockworld( pickup(), _ );
-		PickUp();
-		send(im, inform, took_over(X, Y));
+		send(im, inform, took_over(Xb, Yb));
 		
-		goto(9, 9);
+		goto(Xs, Ys);
 		@blockworld( drop(), _ );
-		-carry(bomb);
-		+done(X, Y);
+		+done(Xb, Yb, Xs, Ys);
 	}

@@ -21,12 +21,13 @@ plans:
 
 
 pcrules:
-	message( im, inform, La, On, bombAt(X, Y) ) <- true |
+	message( im, inform, La, On, stockProduct(Xb, Yb, Xs, Ys) ) <- true |
 	{
 		create(assigned_rider, ar);
-		ar.adoptz(task(X, Y));
-		ar.execute(B(done(X, Y)));
-		send(im, inform, done(X, Y));
+		ar.adoptz(task(Xb, Yb, Xs, Ys));
+		ar.execute(B(done(Xb, Yb, Xs, Ys)));
+		release(ar);
+		send(im, inform, done(Xb, Yb, Xs, Ys));
 	}
 
 

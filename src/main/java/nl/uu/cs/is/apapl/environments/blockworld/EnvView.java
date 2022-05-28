@@ -85,8 +85,8 @@ class EnvView extends JPanel implements ObsVectListener, Observer {
 				// add bombs, removing if needed
 				case STATE_ADDBOMB:
 					// Changed SA:
-					if( _env.isStone( p ) != null )
-						_env.removeStone( p );
+					//if( _env.isStone( p ) != null )
+					//	_env.removeStone( p );
 	
 					if( _env.isTrap( p ) != null )
 						_env.removeTrap( p );
@@ -111,8 +111,8 @@ class EnvView extends JPanel implements ObsVectListener, Observer {
 						_env.removeBomb( p );
 	
 					// Changed SA:
-					if( _env.isStone( p ) != null )
-						_env.removeStone( p );
+					//if( _env.isStone( p ) != null )
+					//	_env.removeStone( p );
 	
 					_env.addTrap( p );
 					break;
@@ -120,8 +120,8 @@ class EnvView extends JPanel implements ObsVectListener, Observer {
 				// remove all
 				case STATE_REMOVE:
 					// Changed SA:
-					if( _env.isStone( p ) != null)
-						_env.removeStone( p );
+					//if( _env.isStone( p ) != null)
+					//	_env.removeStone( p );
 	
 					if( _env.isBomb( p ) != null )
 						_env.removeBomb( p );
@@ -380,14 +380,8 @@ class EnvView extends JPanel implements ObsVectListener, Observer {
 				// draw stone (blue square)
 				// Changed SA
 				if( _env.isStone( p ) != null ) {
-					if(imgStone == null) {
 						g.setColor( Color.blue );
-						g.fillRect( (int) (x * cw), (int) (y * ch), (int) cw,
-							(int) ch );
-					} else {
-						g.drawImage(imgStone, (int) (x * cw + 1), (int) (y * ch + 1), (int) cw - 1,
-							(int) ch - 1, this);
-					}
+						g.fillRect( (int) (x * cw), (int) (y * ch), (int) cw,(int) ch );
 				}
 
 				// draw bomb (red oval)
