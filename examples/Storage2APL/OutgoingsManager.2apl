@@ -1,55 +1,87 @@
 include: person.2apl;
 
 beliefs:
-	start(0,1).
+	start(15,15).
+	state(waiting).
+	worker(rider1, free).
+	worker(rider2, free).
+	clean_og(blockworld) :- not trap(14, 14).
 
 
-beliefupdates:
-  { bomb(X,Y) }         RemoveBomb(X,Y) { not bomb(X,Y) }
-  { true }              AddBomb(X,Y)    { bomb(X,Y) }
-  { carry( bomb ) }     Drop( )         { not carry( bomb ) }
-  { not carry( bomb ) } PickUp( )       { carry( bomb ) }
+beliefupdates:  	
+  	{ worker(R, free) }		AssignRider(R)			{ not worker(R, free), worker(R, on_task) }
+  	{ worker(R, on_task) }	FreeRider(R)			{ not worker(R, on_task), worker(R, free) }
+  	{ state(waiting) } 		LookingForShelfStatus() { not state(waiting), state(freeShelf) }
+  	{ state(freeShelf) }	AssignRiderStatus() 	{ not state(freeShelf), state(assignRider) }
+  	{ state(assignRider) }	WaitForPickupStatus()	{ not state(assignRider), state(waitForPickup) }
+  	{ state(waitForPickup)}	WaitingStatus()			{ not state(waitForPickup), state(waiting) }
 
-beliefs:
-  clean( blockWorld ) :- not bomb(X,Y) , not carry(bomb).
+
+goals:
+	clean_og(blockworld).
+
 
 plans:
   B(start(X,Y));
-  @blockworld( enter( X, Y, yellow ), _ );
-
-goals:
-  clean( blockWorld ).
+  @blockworld( enter( X, Y, green ), _ );
+  @blockworld( senseTraps(), TRAPS );
+  if B(TRAPS = [[default, 14, 14] | REST]) then
+  {
+  	+ trap(14, 14);
+  }
+  
 
 pgrules:
-  clean( blockWorld ) <- bomb( X, Y ) |
-  {
-    goto( X, Y );
-    @blockworld( pickup( ), _ );
-	PickUp( );
-	RemoveBomb( X, Y );
-    goto( 0, 0 );
-	@blockworld( drop( ), _ );
-    Drop( );
-  }
+	clean_og( blockworld ) <- state(waiting) and worker(RIDER, free) |
+	{
+  		send(shelves, request, stupid(RIDER));
+  		LookingForShelfStatus();
+  	}
+  	
+  	clean_og( blockworld ) <- state(assignRider) and trap(Xb, Yb) and target_shelf(Xs, Ys) and worker(RIDER, free) |
+  	{
+		send(RIDER, inform, takeProduct(Xb, Yb, Xs, Ys));
+		- target_shelf(Xs, Ys);
+		AssignRider(RIDER);
+		send(im, inform, assignRider(RIDER));
+		WaitForPickupStatus();
+  	}
+
 
 pcrules:
-  message( sally, inform, La, On, bombAt( X, Y ) ) <- true |
-  {   
-    if B( not bomb( A, B ) )
-    {
-      AddBomb( X, Y );
-      adoptz( clean( blockWorld ) );
-    }
-    else
-	{ 
-	  AddBomb( X, Y );
+	event(trapAt(14, 14), blockworld) <- true |
+	{
+		+ trap(14, 14);
+		adoptz(clean_og(blockworld));
 	}
-  }
-
-prrules:
-  @blockworld( pickup(), _ ); REST; <- true |
-  {
-    @blockworld( sensePosition(), POS );
-    B(POS = [X,Y]);
-    RemoveBomb( X, Y );
-  }
+	
+	message(shelves, inform, La, On, shelf(X, Y)) <- true | {
+		+ target_shelf(X, Y);
+		AssignRiderStatus();
+	}
+	
+	message(RIDER, inform, La, On, took_over(X, Y)) <- true | {
+		- trap(X, Y);
+		WaitingStatus();
+	}
+	
+	message(RIDER, inform, La, On, done(Xb, Yb, Xs, Ys)) <- true | {
+		FreeRider(RIDER);
+		send(im, inform, freeRider(RIDER));
+	}
+	
+	message(im, request, La, On, freeRider(RIDER)) <- true |
+	{
+		freeRider(RIDER);
+	}
+	
+	message(im, request, La, On, assignRider(RIDER)) <- true |
+	{
+		assignRider(RIDER);
+	}
+	
+	
+	
+	
+	
+	

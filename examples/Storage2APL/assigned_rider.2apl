@@ -12,3 +12,14 @@ pgrules:
 		@blockworld( drop(), _ );
 		+done(Xb, Yb, Xs, Ys);
 	}
+	
+	task2(Xb, Yb, Xs, Ys) <- true |
+	{
+		goto(Xs, Ys);
+		@blockworld( pickup(), _ );
+		send(om, inform, took_over(Xs, Ys));
+		
+		goto(Xb, Yb);
+		@blockworld( drop(), _ );
+		+done(Xb, Yb, Xs, Ys);
+	}

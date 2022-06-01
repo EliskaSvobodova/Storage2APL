@@ -29,6 +29,14 @@ pcrules:
 		release(ar);
 		send(im, inform, done(Xb, Yb, Xs, Ys));
 	}
+	message( om, inform, La, On, takeProduct(Xb, Yb, Xs, Ys) ) <- true |
+	{
+		create(assigned_rider, ar);
+		ar.adoptz(task2(Xb, Yb, Xs, Ys));
+		ar.execute(B(done(Xb, Yb, Xs, Ys)));
+		release(ar);
+		send(im, inform, done(Xb, Yb, Xs, Ys));
+	}
 
 
 pgrules:

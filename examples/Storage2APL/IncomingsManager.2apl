@@ -45,6 +45,7 @@ pgrules:
 		send(RIDER, inform, stockProduct(Xb, Yb, Xs, Ys));
 		- target_shelf(Xs, Ys);
 		AssignRider(RIDER);
+		send(om, inform, assignRider(RIDER));
 		WaitForPickupStatus();
   	}
 
@@ -68,4 +69,15 @@ pcrules:
 	
 	message(RIDER, inform, La, On, done(Xb, Yb, Xs, Ys)) <- true | {
 		FreeRider(RIDER);
+		send(om, inform, freeRider(RIDER));
+	}
+	
+	message(om, request, La, On, freeRider(RIDER)) <- true |
+	{
+		freeRider(RIDER);
+	}
+	
+	message(om, request, La, On, assignRider(RIDER)) <- true |
+	{
+		AssignRider(RIDER);
 	}

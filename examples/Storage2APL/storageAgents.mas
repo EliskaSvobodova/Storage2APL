@@ -5,6 +5,7 @@
     <parameter key="entities" value="2"/>
   </environment>
   <agent name="im" file="IncomingsManager.2apl"/>
+  <agent name="om" file="OutgoingsManager.2apl"/>
   <agent name="rider1" file="Rider.2apl"/>
   <agent name="rider2" file="Rider.2apl"/>
   <agent name="shelves" file="Shelves.2apl"/>
