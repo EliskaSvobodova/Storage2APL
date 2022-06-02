@@ -1,0 +1,32 @@
+include: moving.2apl;
+
+
+beliefs:
+	worker(rider1, free).
+	worker(rider2, free).
+
+
+beliefupdates:
+	{ worker(R, free) }		AssignRider(R)			{ not worker(R, free), worker(R, on_task) }
+  	{ worker(R, on_task) }	FreeRider(R)			{ not worker(R, on_task), worker(R, free) }
+
+
+pgrules:
+	assignRider(M) <- worker(RIDER, free) |
+	{
+		AssignRider(RIDER);
+		send(M, inform, assigned(RIDER));
+		dropgoal(assignRider(M));
+	}
+
+
+pcrules:
+	message(M, request, La, On, assign(X, Y)) <- true |
+	{
+		adoptz(assignRider(M));
+	}
+
+	message(M, inform, La, On, free(RIDER)) <- true |
+	{
+		FreeRider(RIDER);
+	}

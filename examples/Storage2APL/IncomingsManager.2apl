@@ -4,15 +4,10 @@ include: person.2apl;
 beliefs:
 	start(0,0).
 	state(waiting).
-	worker(rider1, free).
-	worker(rider2, free).
 	clean_ig(blockworld) :- not bomb(1, 1).
 
 
 beliefupdates:  	
-  	{ worker(R, free) }		AssignRider(R)			{ not worker(R, free), worker(R, on_task) }
-  	{ worker(R, on_task) }	FreeRider(R)			{ not worker(R, on_task), worker(R, free) }
-  	
   	{ state(waiting) } 		LookingForShelfStatus() { not state(waiting), state(assignShelf) }
   	{ state(assignShelf) }	AssignRiderStatus() 	{ not state(assignShelf), state(assignRider) }
   	{ state(assignRider) }	WaitForPickupStatus()	{ not state(assignRider), state(waitForPickup) }
@@ -34,18 +29,17 @@ plans:
   
 
 pgrules:
-	clean_ig( blockworld ) <- state(waiting) and worker(RIDER, free) |
+	clean_ig( blockworld ) <- state(waiting) and bomb(X, Y) |
 	{
-  		send(shelves, request, stupid(RIDER));
+  		send(shelves, request, assign(X, Y));
+  		send(rm, request, assign(X, Y));
   		LookingForShelfStatus();
   	}
   	
-  	clean_ig( blockworld ) <- state(assignRider) and bomb(Xb, Yb) and target_shelf(Xs, Ys) and worker(RIDER, free) |
+  	clean_ig( blockworld ) <- state(assignRider) and bomb(Xb, Yb) and target_shelf(Xs, Ys) and worker(RIDER) |
   	{
 		send(RIDER, inform, stockProduct(Xb, Yb, Xs, Ys));
 		- target_shelf(Xs, Ys);
-		AssignRider(RIDER);
-		send(om, inform, assignRider(RIDER));
 		WaitForPickupStatus();
   	}
 
@@ -62,23 +56,16 @@ pcrules:
 		AssignRiderStatus();
 	}
 	
+	message(rm, inform, La, On, assigned(RIDER)) <- true | {
+		+ worker(RIDER);
+	}
+	
 	message(RIDER, inform, La, On, took_over(X, Y)) <- true | {
 		- bomb(X, Y);
 		WaitingStatus();
 	}
 	
 	message(RIDER, inform, La, On, done(Xb, Yb, Xs, Ys)) <- true | {
-		FreeRider(RIDER);
 		send(shelves, inform, full(Xs, Ys));
-		send(om, inform, freeRider(RIDER));
-	}
-	
-	message(om, inform, La, On, freeRider(RIDER)) <- true |
-	{
-		FreeRider(RIDER);
-	}
-	
-	message(om, inform, La, On, assignRider(RIDER)) <- true |
-	{
-		AssignRider(RIDER);
+		send(rm, inform, free(RIDER));
 	}

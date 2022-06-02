@@ -13,12 +13,12 @@ pcrules:
 		+ shelf(X, Y, free);
 	}
 	
-	message(im, request, La, On, _) <- true |
+	message(im, request, La, On, assign(X, Y)) <- true |
 	{
 		adoptz(assignFreeShelf);
 	}
 	
-	message(om, request, La, On, _) <- true |
+	message(om, request, La, On, assign(X, Y)) <- true |
 	{
 		adoptz(assignFullShelf);
 	}
