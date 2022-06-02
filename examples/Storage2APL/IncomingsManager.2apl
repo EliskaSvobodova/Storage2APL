@@ -69,6 +69,7 @@ pcrules:
 	
 	message(RIDER, inform, La, On, done(Xb, Yb, Xs, Ys)) <- true | {
 		FreeRider(RIDER);
+		send(shelves, inform, full(Xs, Ys));
 		send(om, inform, freeRider(RIDER));
 	}
 	

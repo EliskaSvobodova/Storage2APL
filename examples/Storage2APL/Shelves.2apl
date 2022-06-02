@@ -2,8 +2,9 @@ include: person.2apl;
 
 
 beliefupdates:
-	{ shelf(X, Y, free) }	AssignShelf(X, Y)	{ not shelf(X, Y, free), shelf(X, Y, full) }
-	{ shelf(X, Y, full) }	FreeShelf(X, Y)	{ shelf(X, Y, free), not shelf(X, Y, full) }
+	{ shelf(X, Y, free) }		AssignShelf(X, Y)	{ not shelf(X, Y, free), shelf(X, Y, assigned) }
+	{ shelf(X, Y, assigned) }	FullShelf(X, Y)		{ not shelf(X, Y, assigned), shelf(X, Y, full) }
+	{ shelf(X, Y, full) }		FreeShelf(X, Y)		{ shelf(X, Y, free), not shelf(X, Y, full) }
 
 
 pcrules:
@@ -14,26 +15,31 @@ pcrules:
 	
 	message(im, request, La, On, _) <- true |
 	{
-		adoptz(assignShelf);
+		adoptz(assignFreeShelf);
 	}
 	
 	message(om, request, La, On, _) <- true |
 	{
-		adoptz(freeShelf);
+		adoptz(assignFullShelf);
+	}
+	
+	message(im, inform, La, On, full(X, Y)) <- true |
+	{
+		FullShelf(X, Y);
 	}
 	
 
 pgrules:
-	assignShelf <- shelf(X, Y, free) |
+	assignFreeShelf <- shelf(X, Y, free) |
 	{
 		AssignShelf(X, Y);
 		send(im, inform, shelf(X, Y));
-		dropgoal(assignShelf);
+		dropgoal(assignFreeShelf);
 	}
 	
-	freeShelf <- shelf(X, Y, full) |
+	assignFullShelf <- shelf(X, Y, full) |
 	{
 		FreeShelf(X, Y);
 		send(om, inform, shelf(X, Y));
-		dropgoal(freeShelf);
+		dropgoal(assignFullShelf);
 	}
