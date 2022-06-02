@@ -97,12 +97,12 @@ public class Agent
 		signalMove.deleteObservers();
 		signalPickupBomb.deleteObservers();
 		signalDropBomb.deleteObservers();
-		signalDisarmBomb.deleteObservers();
+		signalDeliverBomb.deleteObservers();
 
 		signalMoveSucces.deleteObservers();
 		signalPickupBombSucces.deleteObservers();
 		signalDropBombSucces.deleteObservers();
-		signalDisarmBombSucces.deleteObservers();
+		signalDeliverBombSucces.deleteObservers();
 	}
 
 	// / emitted if agent attemps movement (succesful or not)
@@ -128,10 +128,10 @@ public class Agent
 			"agent sucessful drop" );
 	
 	// / emitted if agent attemps to drop a bomb (succesful or not)
-	public transient Signal signalDisarmBomb = new Signal( 
-			"agent attempts disarm" );
+	public transient Signal signalDeliverBomb = new Signal( 
+			"agent attempts deliver" );
 	
-	// / emitted if agent attemps to disarm a bomb (succesful or not)
-	public transient Signal signalDisarmBombSucces = new Signal( 
-					"agent succesful disarm" );
+	// / emitted if agent attemps to Deliver a bomb (succesful or not)
+	public transient Signal signalDeliverBombSucces = new Signal( 
+					"agent succesful deliver" );
 }

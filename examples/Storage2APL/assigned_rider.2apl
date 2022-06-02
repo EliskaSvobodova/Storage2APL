@@ -2,7 +2,7 @@ include: person.2apl;
 
 
 pgrules:
-	task(Xb, Yb, Xs, Ys) <- true |
+	taskStore(Xb, Yb, Xs, Ys) <- true |
 	{
 		goto(Xb, Yb);
 		@blockworld( pickup(), _ );
@@ -13,13 +13,12 @@ pgrules:
 		+done(Xb, Yb, Xs, Ys);
 	}
 	
-	task2(Xb, Yb, Xs, Ys) <- true |
+	taskDeliver(Xs, Ys, Xt, Yt) <- true |
 	{
 		goto(Xs, Ys);
 		@blockworld( pickup(), _ );
-		send(om, inform, took_over(Xs, Ys));
 		
-		goto(Xb, Yb);
-		@blockworld( drop(), _ );
-		+done(Xb, Yb, Xs, Ys);
+		goto(Xt, Yt);
+		@blockworld( deliver(), _ );
+		+done(Xs, Ys, Xt, Yt);
 	}

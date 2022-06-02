@@ -72,12 +72,12 @@ pcrules:
 		send(om, inform, freeRider(RIDER));
 	}
 	
-	message(om, request, La, On, freeRider(RIDER)) <- true |
+	message(om, inform, La, On, freeRider(RIDER)) <- true |
 	{
-		freeRider(RIDER);
+		FreeRider(RIDER);
 	}
 	
-	message(om, request, La, On, assignRider(RIDER)) <- true |
+	message(om, inform, La, On, assignRider(RIDER)) <- true |
 	{
 		AssignRider(RIDER);
 	}

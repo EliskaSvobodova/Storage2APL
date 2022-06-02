@@ -11,10 +11,11 @@ beliefs:
 beliefupdates:  	
   	{ worker(R, free) }		AssignRider(R)			{ not worker(R, free), worker(R, on_task) }
   	{ worker(R, on_task) }	FreeRider(R)			{ not worker(R, on_task), worker(R, free) }
+  	
   	{ state(waiting) } 		LookingForShelfStatus() { not state(waiting), state(freeShelf) }
   	{ state(freeShelf) }	AssignRiderStatus() 	{ not state(freeShelf), state(assignRider) }
-  	{ state(assignRider) }	WaitForPickupStatus()	{ not state(assignRider), state(waitForPickup) }
-  	{ state(waitForPickup)}	WaitingStatus()			{ not state(waitForPickup), state(waiting) }
+  	{ state(assignRider) }	WaitForDeliverStatus()	{ not state(assignRider), state(waitForDeliver) }
+  	{ state(waitForDeliver)}	WaitingStatus()		{ not state(waitForPickup), state(waiting) }
 
 
 goals:
@@ -38,13 +39,13 @@ pgrules:
   		LookingForShelfStatus();
   	}
   	
-  	clean_og( blockworld ) <- state(assignRider) and trap(Xb, Yb) and target_shelf(Xs, Ys) and worker(RIDER, free) |
+  	clean_og( blockworld ) <- state(assignRider) and trap(Xt, Yt) and target_shelf(Xs, Ys) and worker(RIDER, free) |
   	{
-		send(RIDER, inform, takeProduct(Xb, Yb, Xs, Ys));
+		send(RIDER, inform, takeProduct(Xs, Ys, Xt, Yt));
 		- target_shelf(Xs, Ys);
 		AssignRider(RIDER);
 		send(im, inform, assignRider(RIDER));
-		WaitForPickupStatus();
+		WaitForDeliverStatus();
   	}
 
 
@@ -60,24 +61,21 @@ pcrules:
 		AssignRiderStatus();
 	}
 	
-	message(RIDER, inform, La, On, took_over(X, Y)) <- true | {
-		- trap(X, Y);
+	message(RIDER, inform, La, On, done(Xs, Ys, Xt, Yt)) <- true | {
+		FreeRider(RIDER);
+		send(im, inform, freeRider(RIDER));
+		- trap(Xt, Yt);
 		WaitingStatus();
 	}
 	
-	message(RIDER, inform, La, On, done(Xb, Yb, Xs, Ys)) <- true | {
+	message(im, inform, La, On, freeRider(RIDER)) <- true |
+	{
 		FreeRider(RIDER);
-		send(im, inform, freeRider(RIDER));
 	}
 	
-	message(im, request, La, On, freeRider(RIDER)) <- true |
+	message(im, inform, La, On, assignRider(RIDER)) <- true |
 	{
-		freeRider(RIDER);
-	}
-	
-	message(im, request, La, On, assignRider(RIDER)) <- true |
-	{
-		assignRider(RIDER);
+		AssignRider(RIDER);
 	}
 	
 	
