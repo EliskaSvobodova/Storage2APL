@@ -7,10 +7,8 @@ beliefs:
 
 
 beliefupdates:  	
-  	{ state(waiting) } 		LookingForShelfStatus() { not state(waiting), state(freeShelf) }
-  	{ state(freeShelf) }	AssignRiderStatus() 	{ not state(freeShelf), state(assignRider) }
-  	{ state(assignRider) }	WaitForDeliverStatus()	{ not state(assignRider), state(waitForDeliver) }
-  	{ state(waitForDeliver)}	WaitingStatus()		{ not state(waitForPickup), state(waiting) }
+  	{ state(waiting) } 		WaitForPickupStatus()	{ not state(waiting), state(waitForPickup) }
+  	{ state(waitForPickup)}	WaitingStatus()			{ not state(waitForPickup), state(waiting) }
 
 
 goals:
@@ -35,11 +33,11 @@ pgrules:
   		LookingForShelfStatus();
   	}
   	
-  	clean_og( blockworld ) <- state(assignRider) and trap(Xt, Yt) and target_shelf(Xs, Ys) and worker(RIDER) |
+  	clean_og( blockworld ) <- trap(Xt, Yt) and target_shelf(Xs, Ys) and worker(RIDER) |
   	{
 		send(RIDER, inform, takeProduct(Xs, Ys, Xt, Yt));
 		- target_shelf(Xs, Ys);
-		WaitForDeliverStatus();
+		- worker(RIDER);
   	}
 
 
@@ -52,7 +50,6 @@ pcrules:
 	
 	message(shelves, inform, La, On, shelf(X, Y)) <- true | {
 		+ target_shelf(X, Y);
-		AssignRiderStatus();
 	}
 	
 	message(rm, inform, La, On, assigned(RIDER)) <- true | {
